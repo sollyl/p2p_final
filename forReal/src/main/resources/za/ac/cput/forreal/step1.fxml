@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.Step1Controller">
+   <children>
+      <ImageView fitHeight="890.0" fitWidth="1591.0" layoutX="-16.0" layoutY="-15.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Frame%2070%20(3).png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="-1.0" prefHeight="100.0" prefWidth="413.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="733.0" prefHeight="600.0" prefWidth="1074.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.layout.AnchorPane?&gt;&lt;AnchorPane maxHeight=&quot;600.0&quot; prefHeight=&quot;200.0&quot; prefWidth=&quot;1000.0&quot; rotate=&quot;-8.0&quot; style=&quot;-fx-background-color: FFC857; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-width: 1px; -fx-border-color: #1E2A38;&quot; xmlns=&quot;http://javafx.com/javafx/24.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
+               <children>
+                  <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" rotate="-8.0" style="-fx-background-color: FFC857;" styleClass="log_cards" stylesheets="@main.css" />
+                  <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" styleClass="log_cards" stylesheets="@main.css">
+                     <children>
+                        <HBox layoutX="114.0" layoutY="64.0" prefHeight="60.0" prefWidth="200.0" styleClass="log_top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="30.0" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="12.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" maxHeight="45.0" prefHeight="100.0" prefWidth="45.0" styleClass="circle_logo">
+                                       <children>
+                                          <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../ChatGPT%20Image%20Aug%208,%202025,%2001_00_55%20AM-Photoroom.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Sign up">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="30.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="34.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="500.0" styleClass="log_left">
+                                 <children>
+                                    <ImageView fitHeight="540.0" fitWidth="507.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                                       <image>
+                                          <Image url="@../../../../Frame%2076%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="125.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Frame%2086.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox alignment="CENTER" layoutX="150.0" layoutY="314.0" prefHeight="48.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <Label text="Who are you?" textFill="WHITE">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="28.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="44.0" layoutY="371.0" prefHeight="67.0" prefWidth="412.0">
+                                       <children>
+                                          <Label text="Select your role, year of study, and course so we can tailor your profile." textAlignment="CENTER" textFill="#fb923c" wrapText="true">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children></HBox>
+                                 </children>
+                              </AnchorPane>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="log_right" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="440.0">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="95.0" layoutY="38.0" prefHeight="46.0" text="Step 1" textFill="#1a1a1a" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox layoutX="47.0" layoutY="140.0" prefHeight="265.0" prefWidth="100.0" spacing="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                   <children>
+                                                      <Label prefHeight="19.0" text="Choose your role" textFill="#1a1a1a">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox prefHeight="34.0" prefWidth="440.0" VBox.vgrow="ALWAYS">
+                                                         <styleClass>
+                                                            <String fx:value="log_field" />
+                                                            <String fx:value="box_text" />
+                                                         </styleClass>
+                                                      </ComboBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                   <children>
+                                                      <Label prefHeight="19.0" text="Current course enroll" textFill="#1a1a1a">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox prefHeight="34.0" prefWidth="440.0">
+                                                         <styleClass>
+                                                            <String fx:value="log_field" />
+                                                            <String fx:value="box_text" />
+                                                         </styleClass>
+                                                      </ComboBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                   <children>
+                                                      <Label prefHeight="19.0" text="Year of study" textFill="#1a1a1a">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox prefHeight="34.0" prefWidth="440.0">
+                                                         <styleClass>
+                                                            <String fx:value="log_field" />
+                                                            <String fx:value="box_text" />
+                                                         </styleClass>
+                                                      </ComboBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER" layoutX="73.0" layoutY="81.0" prefHeight="25.0" prefWidth="303.0" spacing="30.0">
+                                             <children>
+                                                <AnchorPane maxHeight="10.0" prefHeight="200.0" prefWidth="80.0" styleClass="step_bar" />
+                                                <AnchorPane maxHeight="10.0" prefHeight="200.0" prefWidth="80.0" styleClass="step_bar_normal" />
+                                                <AnchorPane maxHeight="10.0" prefHeight="200.0" prefWidth="80.0" styleClass="step_bar_normal" />
+                                             </children>
+                                          </HBox>
+                                          <AnchorPane layoutX="45.0" layoutY="427.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Label layoutX="23.0" layoutY="24.0" onMouseClicked="#step3" style="-fx-text-fill: FF6A28;" styleClass="orange_links" text="Skip for now" AnchorPane.bottomAnchor="23.999999999999993" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutY="8.0" mnemonicParsing="false" onMouseClicked="#step2" prefHeight="50.0" prefWidth="130.0" text="Next" textFill="WHITE" AnchorPane.rightAnchor="0.0">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="18.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="but" />
+                                                      <String fx:value="circle_orange" />
+                                                   </styleClass>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

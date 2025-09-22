@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2850.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.LandingController">
+   <children>
+      <ScrollPane fx:id="scroller" fitToWidth="true" layoutX="-1.0" layoutY="113.0" prefHeight="2784.0" prefWidth="1530.0" styleClass="scrolly" stylesheets="@main.css" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <content>
+            <VBox prefHeight="2777.0" prefWidth="1530.0">
+               <children>
+                  <HBox prefHeight="627.0" prefWidth="1530.0" styleClass="back_ground" stylesheets="@main.css">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="610.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="132.0" prefHeight="21.0" prefWidth="200.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <AnchorPane maxHeight="2.0" prefHeight="2.0" prefWidth="49.0">
+                                             <styleClass>
+                                                <String fx:value="circle" />
+                                                <String fx:value="accent1" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <Label text="Brains meet. Ideas spark. Success follows" textFill="#ffc857">
+                                             <font>
+                                                <Font name="SansSerif Regular" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="-3.0" layoutY="171.0" prefHeight="162.0" prefWidth="594.0" text="Learn from Peers who’ve been there," textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="49.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="272.0" layoutY="254.0" prefHeight="58.0" prefWidth="258.0" styleClass="underLine_land" text="Done That.">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="49.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="69.0" layoutY="356.0" text="Label" />
+                                    <Label layoutX="1.0" layoutY="341.0" text="Connect with students who’ve been in your shoes and know what it takes to succeed. From breaking down tough topics to sharing smart study hacks, our peers make learning easier, relatable, and way less stressful." textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" layoutY="452.0" prefHeight="100.0" prefWidth="205.0" spacing="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" maxHeight="58.0" prefHeight="58.0" prefWidth="154.0" style="-fx-background-color: FDF6EC;">
+                                             <children>
+                                                <Label text="Login" textFill="#1a1a1a">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="circle" />
+                                                <String fx:value="circle_whte" />
+                                             </styleClass>
+                                          </HBox>
+                                          <HBox alignment="CENTER" maxHeight="58.0" prefHeight="45.0" prefWidth="154.0" style="-fx-background-color: #FF6A28;">
+                                             <children>
+                                                <Label text="Sign up" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="circle" />
+                                                <String fx:value="circle_orange" />
+                                             </styleClass>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <ImageView fitHeight="625.0" fitWidth="755.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Frame%2021%20(1)_page-0001.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="featuresSection" alignment="TOP_CENTER" prefHeight="937.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: F9FAFB;">
+                     <children>
+                        <HBox alignment="BOTTOM_CENTER" maxWidth="690.0" prefHeight="95.0" prefWidth="1385.0" stylesheets="@main.css">
+                           <children>
+                              <Label text="Everything you need to succeed" textFill="#1a1a1a">
+                                 <font>
+                                    <Font name="SansSerif Bold" size="45.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" maxWidth="620.0" prefHeight="65.0" prefWidth="615.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="621.0" text="Our platform is designed by students for students, with all the tools you need to excel in your studies" textAlignment="CENTER" textFill="#333333" wrapText="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="730.0" prefWidth="1530.0" spacing="40.0">
+                           <children>
+                              <HBox prefHeight="290.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="76.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="404.0" styleClass="block">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="72.0" prefHeight="100.0" prefWidth="72.0" styleClass="circle_logo">
+                                                         <children>
+                                                            <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../videocam_50dp_FFFFFF_FILL1_wght400_GRAD200_opsz48.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="401.0">
+                                                   <children>
+                                                      <Label prefWidth="251.0" text="Video Study Sessions" textFill="#0b1c2c">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" maxWidth="304.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Connect with study buddies through secure video calls for free collaborative sessions." textAlignment="CENTER" textFill="#4b5563" wrapText="true">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="404.0" styleClass="block">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="72.0" prefHeight="100.0" prefWidth="72.0" styleClass="circle_logo">
+                                                         <children>
+                                                            <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../calendar_month_50dp_FFFFFF_FILL1_wght400_GRAD200_opsz48.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="401.0">
+                                                   <children>
+                                                      <Label prefWidth="251.0" text="Schedule &amp; Timetable" textFill="#0b1c2c">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" maxWidth="304.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Plan your study sessions, set up your weekly schedule, and never miss a tutoring session." textAlignment="CENTER" textFill="#4b5563" wrapText="true">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="404.0" styleClass="block">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="72.0" prefHeight="100.0" prefWidth="72.0" styleClass="circle_logo">
+                                                         <children>
+                                                            <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../chat_50dp_FFFFFF_FILL1_wght400_GRAD200_opsz48.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="401.0">
+                                                   <children>
+                                                      <Label prefHeight="27.0" prefWidth="213.0" text="Messaging system" textAlignment="CENTER" textFill="#0b1c2c">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" maxWidth="304.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Communicate easily with tutors and other students through our built-in messaging platform." textAlignment="CENTER" textFill="#4b5563" wrapText="true">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="290.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="76.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="404.0" styleClass="block">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="72.0" prefHeight="100.0" prefWidth="72.0" styleClass="circle_logo">
+                                                         <children>
+                                                            <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../book_2_50dp_FFFFFF_FILL1_wght400_GRAD200_opsz48.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="401.0">
+                                                   <children>
+                                                      <Label prefHeight="27.0" prefWidth="206.0" text="Resource Sharing" textFill="#0b1c2c">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" maxWidth="304.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Upload and download study materials, notes, exercises and other educational resources." textAlignment="CENTER" textFill="#4b5563" wrapText="true">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="404.0" styleClass="block">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="72.0" prefHeight="100.0" prefWidth="72.0" styleClass="circle_logo">
+                                                         <children>
+                                                            <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../groups_50dp_FFFFFF_FILL1_wght400_GRAD200_opsz48.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="401.0">
+                                                   <children>
+                                                      <Label prefHeight="27.0" prefWidth="224.0" text="Connect with Peers" textAlignment="CENTER" textFill="#0b1c2c">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" maxWidth="304.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Build your academic network by connecting with other CPUT students in your course." textAlignment="CENTER" textFill="#4b5563" wrapText="true">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="404.0" styleClass="block">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="130.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="72.0" prefHeight="100.0" prefWidth="72.0" styleClass="circle_logo">
+                                                         <children>
+                                                            <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../school_50dp_FFFFFF_FILL1_wght400_GRAD200_opsz48.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="401.0">
+                                                   <children>
+                                                      <Label prefHeight="27.0" prefWidth="171.0" text="Verified Tutors" textAlignment="CENTER" textFill="#0b1c2c">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" maxWidth="304.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Only top achieving 2nd year students and above can register as tutors, ensuring quality academic support." textAlignment="CENTER" textFill="#4b5563" wrapText="true">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="howItWorksSection" alignment="TOP_CENTER" prefHeight="441.0" prefWidth="100.0" spacing="20.0" styleClass="back_ground">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="111.0" prefWidth="100.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="80.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="How It Works" textFill="#ff6a28">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="45.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Getting started with Peer2Peer Tutoring is simple and straightforward" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <HBox maxWidth="961.0" prefHeight="205.0" prefWidth="205.0">
+                           <children>
+                              <ImageView fitHeight="203.25" fitWidth="960.59" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Frame%2045_page-0001.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="aboutUs" prefHeight="672.65" prefWidth="100.0">
+                     <children>
+                        <AnchorPane prefHeight="72.0" prefWidth="200.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="65.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fitHeight="530.0" fitWidth="668.62" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../meeting-mobile-phone-lesson-wall-college%201_page-0001.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="200.0" prefWidth="627.0">
+                                       <children>
+                                          <AnchorPane prefHeight="34.0" prefWidth="200.0" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox prefHeight="110.0" prefWidth="626.0">
+                                                   <children>
+                                                      <Label text="Unlock Your Potential with P2P Tutoring" textFill="#1a1a1a" wrapText="true">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="45.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <Label text="With P2P Tutoring, you don’t just study—you grow. Whether it’s learning from peers, sharing resources, or getting help from verified tutors, our platform gives you the support you need to succeed academically and build lasting connections." textFill="#333333" wrapText="true">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="626.0" spacing="11.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="58.0" prefHeight="52.0" prefWidth="162.0" style="-fx-background-color: F9FAFB; -fx-border-color: rgba(30, 42, 56, 0.5);; -fx-border-width: 1px;">
+                                                         <children>
+                                                            <Label text="Get Started" textFill="#1a1a1a">
+                                                               <font>
+                                                                  <Font name="SansSerif Regular" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="finalle" />
+                                                            <String fx:value="circle_whte" />
+                                                         </styleClass>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" maxHeight="58.0" prefHeight="45.0" prefWidth="154.0" style="-fx-background-color: #FF6A28;">
+                                                         <children>
+                                                            <Label text="Sign up" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="circle" />
+                                                            <String fx:value="finalle" />
+                                                            <String fx:value="circle_orange" />
+                                                         </styleClass>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <ImageView fitHeight="68.56" fitWidth="626.4" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../Frame%2056_page-0001.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <AnchorPane prefHeight="35.0" prefWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+                           </children>
+                        </HBox>
+                        <AnchorPane prefHeight="72.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="bottom" alignment="CENTER" prefHeight="91.0" prefWidth="1530.0" styleClass="back_ground">
+                     <children>
+                        <Label text=" 2025 Peer2Peer Tutoring" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" layoutX="-33.0" layoutY="-17.0" prefHeight="80.0" prefWidth="1530.0" styleClass="back_ground" stylesheets="@main.css" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="190.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="45.0" maxWidth="45.0" prefHeight="45.0" prefWidth="45.0" styleClass="circle_logo">
+                           <children>
+                              <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../ChatGPT%20Image%20Aug%208,%202025,%2001_00_55%20AM-Photoroom.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Label text="P2P Tutoring" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="46.0" prefHeight="46.0" prefWidth="54.0">
+                           <children>
+                              <Label onMouseClicked="#scrollToHome" styleClass="hover" text="Home" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="46.0" prefHeight="46.0" prefWidth="74.0">
+                           <children>
+                              <Label onMouseClicked="#scrollToFeatures" styleClass="hover" text="Features" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="46.0" prefHeight="46.0" prefWidth="107.0">
+                           <children>
+                              <Label onMouseClicked="#scrollToHowItWorks" styleClass="hover" text="How it works" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="howItWorksNav" alignment="CENTER" maxHeight="46.0" prefHeight="46.0" prefWidth="54.0">
+                           <children>
+                              <Label onMouseClicked="#scrollToAboutSection" styleClass="hover" text="About" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="205.0" spacing="11.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="45.0" onMouseClicked="#login" prefHeight="45.0" prefWidth="97.0" style="-fx-background-color: FDF6EC;">
+                           <children>
+                              <Label text="Login" textFill="#1a1a1a">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="circle" />
+                              <String fx:value="circle_whte" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="45.0" prefHeight="45.0" prefWidth="97.0" style="-fx-background-color: #FF6A28;">
+                           <children>
+                              <Label text="Sign up" textFill="WHITE">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="circle" />
+                              <String fx:value="circle_orange" />
+                           </styleClass>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="200.0" prefWidth="85.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

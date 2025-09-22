@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.LoginController">
+   <children>
+      <ImageView fitHeight="873.0" fitWidth="1591.0" layoutX="-8.8" layoutY="-15.0" pickOnBounds="true" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="-52.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../Frame%2070%20(3).png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="-1.0" prefHeight="100.0" prefWidth="1519.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="733.0" prefHeight="600.0" prefWidth="1074.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.layout.AnchorPane?&gt;&lt;AnchorPane maxHeight=&quot;600.0&quot; prefHeight=&quot;200.0&quot; prefWidth=&quot;1000.0&quot; rotate=&quot;-8.0&quot; style=&quot;-fx-background-color: FFC857; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-width: 1px; -fx-border-color: #1E2A38;&quot; xmlns=&quot;http://javafx.com/javafx/24.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
+               <children>
+                  <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" rotate="-8.0" style="-fx-background-color: FFC857;" styleClass="log_cards" stylesheets="@main.css" />
+                  <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" styleClass="log_cards" stylesheets="@main.css">
+                     <children>
+                        <HBox layoutX="114.0" layoutY="64.0" prefHeight="60.0" prefWidth="200.0" styleClass="log_top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="30.0" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="12.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" maxHeight="45.0" prefHeight="100.0" prefWidth="45.0" styleClass="circle_logo">
+                                       <children>
+                                          <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../ChatGPT%20Image%20Aug%208,%202025,%2001_00_55%20AM-Photoroom.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Login">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="30.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="34.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="538.0" prefWidth="500.0" styleClass="log_left">
+                                 <children>
+                                    <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Frame%2086.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="log_right" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="440.0">
+                                       <children>
+                                          <Label layoutX="95.0" layoutY="59.0" prefHeight="46.0" text="Sign into your account" textFill="#1a1a1a" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox layoutY="134.0" prefHeight="65.0" prefWidth="100.0" spacing="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Label prefHeight="19.0" text="Username or email" textFill="#1a1a1a">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField prefHeight="34.0" promptText="Username">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="log_field" />
+                                                      <String fx:value="box_text" />
+                                                   </styleClass>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="30.0" layoutY="220.0" prefHeight="65.0" prefWidth="100.0" spacing="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Label prefHeight="19.0" text="Password" textFill="#1a1a1a">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <PasswordField prefHeight="34.0" promptText="Password" stylesheets="@main.css">
+                                                   <styleClass>
+                                                      <String fx:value="log_field" />
+                                                      <String fx:value="box_text" />
+                                                   </styleClass>
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </PasswordField>
+                                             </children>
+                                          </VBox>
+                                          <AnchorPane layoutX="75.0" layoutY="293.0" prefHeight="15.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Label layoutX="252.0" layoutY="1.5" styleClass="orange_links" text="Forgot password?" textFill="#ff6a28" AnchorPane.rightAnchor="0.0">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <CheckBox mnemonicParsing="false" text="Remember me" textFill="#4b5563">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="13.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <HBox alignment="CENTER" layoutX="83.0" layoutY="339.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="but" text="Login" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" layoutX="69.0" layoutY="413.0" prefHeight="16.0" prefWidth="200.0" spacing="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Label text="Dont have an account?" textFill="#4b5563">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label onMouseClicked="#signup1" styleClass="orange_links" text="Sign up" textFill="#ff6a28">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
