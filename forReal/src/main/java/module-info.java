@@ -4,6 +4,7 @@ module za.ac.cput.forreal {
     requires java.base;
     requires javafx.web; 
     requires java.sql;
+    requires jakarta.mail;
 
     opens za.ac.cput.forreal to javafx.fxml;
     exports za.ac.cput.forreal;

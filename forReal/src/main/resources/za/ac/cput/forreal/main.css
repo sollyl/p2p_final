@@ -259,3 +259,28 @@
 .web-view-transparent .scroll-pane {
     -fx-background-color: transparent;
 }
+
+.auth{
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-width: 1;
+    -fx-border-color: rgba(30,42,56,0.5);
+    -fx-background-color: #D6DAE0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2.5, 0, 0, 2.5);
+    
+}
+
+.auth_top{
+    -fx-border-color:rgba(30,42,56,0.5);
+    -fx-border-width: 1;
+    -fx-background-color: white;
+    -fx-border-radius: 20 20 0 0;
+    -fx-background-radius: 20 20 0 0;
+}
+.auth_box:focused {
+    -fx-border-color: #FF6A28;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 106, 40, 0.4), 6, 0.0, 0, 0);
+}
+
+

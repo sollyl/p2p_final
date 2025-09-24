@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.Signup1Controller">
+<AnchorPane fx:id="main_vibe" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.Signup1Controller">
    <children>
       <ImageView fitHeight="890.0" fitWidth="1591.0" layoutX="-16.0" layoutY="-15.0" pickOnBounds="true">
          <image>
@@ -19,181 +23,263 @@
       </ImageView>
       <HBox alignment="CENTER" layoutX="-1.0" prefHeight="100.0" prefWidth="413.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane maxHeight="733.0" prefHeight="600.0" prefWidth="1074.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.layout.AnchorPane?&gt;&lt;AnchorPane maxHeight=&quot;600.0&quot; prefHeight=&quot;200.0&quot; prefWidth=&quot;1000.0&quot; rotate=&quot;-8.0&quot; style=&quot;-fx-background-color: FFC857; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-width: 1px; -fx-border-color: #1E2A38;&quot; xmlns=&quot;http://javafx.com/javafx/24.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
+            <StackPane maxHeight="733.0" prefHeight="150.0" prefWidth="1074.0">
                <children>
-                  <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" rotate="-8.0" style="-fx-background-color: FFC857;" styleClass="log_cards" stylesheets="@main.css" />
-                  <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" styleClass="log_cards" stylesheets="@main.css">
+                  <AnchorPane maxHeight="733.0" prefHeight="600.0" prefWidth="1074.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.layout.AnchorPane?&gt;&lt;AnchorPane maxHeight=&quot;600.0&quot; prefHeight=&quot;200.0&quot; prefWidth=&quot;1000.0&quot; rotate=&quot;-8.0&quot; style=&quot;-fx-background-color: FFC857; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-width: 1px; -fx-border-color: #1E2A38;&quot; xmlns=&quot;http://javafx.com/javafx/24.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
                      <children>
-                        <HBox layoutX="114.0" layoutY="64.0" prefHeight="60.0" prefWidth="200.0" styleClass="log_top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" rotate="-8.0" style="-fx-background-color: FFC857;" styleClass="accent1" stylesheets="@main.css" />
+                        <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" styleClass="log_cards" stylesheets="@main.css">
                            <children>
-                              <AnchorPane prefHeight="200.0" prefWidth="30.0" />
-                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="12.0" HBox.hgrow="ALWAYS">
+                              <HBox layoutX="114.0" layoutY="64.0" prefHeight="60.0" prefWidth="200.0" styleClass="log_top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <HBox alignment="CENTER" maxHeight="45.0" prefHeight="100.0" prefWidth="45.0" styleClass="circle_logo">
+                                    <AnchorPane prefHeight="200.0" prefWidth="30.0" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="12.0" HBox.hgrow="ALWAYS">
                                        <children>
-                                          <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                          <HBox alignment="CENTER" maxHeight="45.0" prefHeight="100.0" prefWidth="45.0" styleClass="circle_logo">
+                                             <children>
+                                                <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../ChatGPT%20Image%20Aug%208,%202025,%2001_00_55%20AM-Photoroom.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Sign up" textFill="#1a1a1a">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane prefHeight="200.0" prefWidth="30.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="34.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="500.0" styleClass="log_left">
+                                       <children>
+                                          <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="125.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../../../ChatGPT%20Image%20Aug%208,%202025,%2001_00_55%20AM-Photoroom.png" />
+                                                <Image url="@../../../../Frame%2086.png" />
                                              </image>
                                           </ImageView>
-                                       </children>
-                                    </HBox>
-                                    <Label text="Sign up">
-                                       <font>
-                                          <Font name="SansSerif Bold" size="22.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <AnchorPane prefHeight="200.0" prefWidth="30.0" />
-                           </children>
-                        </HBox>
-                        <HBox layoutX="34.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
-                           <children>
-                              <AnchorPane prefHeight="200.0" prefWidth="500.0" styleClass="log_left">
-                                 <children>
-                                    <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="125.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../../../Frame%2086.png" />
-                                       </image>
-                                    </ImageView>
-                                    <HBox alignment="CENTER" layoutX="150.0" layoutY="364.0" prefHeight="48.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                       <children>
-                                          <Label text="Part 1" textFill="WHITE">
-                                             <font>
-                                                <Font name="SansSerif Bold" size="28.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </AnchorPane>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="log_right" HBox.hgrow="ALWAYS">
-                                 <children>
-                                    <AnchorPane prefHeight="200.0" prefWidth="440.0">
-                                       <children>
-                                          <Label layoutX="95.0" layoutY="38.0" prefHeight="46.0" text="Create an account" textFill="#1a1a1a" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                             <font>
-                                                <Font name="SansSerif Bold" size="28.0" />
-                                             </font>
-                                          </Label>
-                                          <HBox alignment="CENTER" layoutX="14.0" layoutY="427.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                          <HBox alignment="CENTER" layoutX="150.0" layoutY="364.0" prefHeight="48.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                              <children>
-                                                <HBox alignment="CENTER" maxHeight="50.0" onMouseClicked="#signup2" prefHeight="100.0" prefWidth="160.0">
-                                                   <children>
-                                                      <Label text="Next" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="SansSerif Bold" size="18.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                   <styleClass>
-                                                      <String fx:value="but" />
-                                                      <String fx:value="circle_orange" />
-                                                   </styleClass>
-                                                </HBox>
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER" layoutX="14.0" layoutY="492.0" prefHeight="16.0" prefWidth="200.0" spacing="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                             <children>
-                                                <Label text="Already have an account?" textFill="#4b5563">
+                                                <Label text="Part 1" textFill="WHITE">
                                                    <font>
-                                                      <Font name="SansSerif Regular" size="13.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label onMouseClicked="#login" styleClass="orange_links" text="Login" textFill="#ff6a28">
-                                                   <font>
-                                                      <Font name="SansSerif Bold" size="13.0" />
+                                                      <Font name="SansSerif Bold" size="28.0" />
                                                    </font>
                                                 </Label>
                                              </children>
                                           </HBox>
-                                          <VBox layoutX="47.0" layoutY="106.0" prefHeight="310.0" prefWidth="100.0" spacing="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                             <children>
-                                                <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
-                                                   <children>
-                                                      <Label prefHeight="19.0" text="Full name" textFill="#1a1a1a">
-                                                         <font>
-                                                            <Font name="SansSerif Bold" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField fx:id="f_name" prefHeight="34.0" promptText="Name">
-                                                         <font>
-                                                            <Font name="SansSerif Regular" size="16.0" />
-                                                         </font>
-                                                         <styleClass>
-                                                            <String fx:value="log_field" />
-                                                            <String fx:value="box_text" />
-                                                         </styleClass>
-                                                      </TextField>
-                                                   </children>
-                                                </VBox>
-                                                <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
-                                                   <children>
-                                                      <Label prefHeight="19.0" text="Student number" textFill="#1a1a1a">
-                                                         <font>
-                                                            <Font name="SansSerif Bold" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField fx:id="stud_number" prefHeight="34.0" promptText="Student number">
-                                                         <font>
-                                                            <Font name="SansSerif Regular" size="16.0" />
-                                                         </font>
-                                                         <styleClass>
-                                                            <String fx:value="log_field" />
-                                                            <String fx:value="box_text" />
-                                                         </styleClass>
-                                                      </TextField>
-                                                   </children>
-                                                </VBox>
-                                                <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
-                                                   <children>
-                                                      <Label prefHeight="19.0" text="Email" textFill="#1a1a1a">
-                                                         <font>
-                                                            <Font name="SansSerif Bold" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField fx:id="stud_email" prefHeight="34.0" promptText="Student email">
-                                                         <font>
-                                                            <Font name="SansSerif Regular" size="16.0" />
-                                                         </font>
-                                                         <styleClass>
-                                                            <String fx:value="log_field" />
-                                                            <String fx:value="box_text" />
-                                                         </styleClass>
-                                                      </TextField>
-                                                   </children>
-                                                </VBox>
-                                                <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
-                                                   <children>
-                                                      <Label prefHeight="19.0" text="Phone number" textFill="#1a1a1a">
-                                                         <font>
-                                                            <Font name="SansSerif Bold" size="17.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField fx:id="phone_num" prefHeight="34.0">
-                                                         <font>
-                                                            <Font name="SansSerif Regular" size="16.0" />
-                                                         </font>
-                                                         <styleClass>
-                                                            <String fx:value="log_field" />
-                                                            <String fx:value="box_text" />
-                                                         </styleClass>
-                                                      </TextField>
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                          </VBox>
                                        </children>
                                     </AnchorPane>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="log_right" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane prefHeight="200.0" prefWidth="440.0">
+                                             <children>
+                                                <Label layoutX="95.0" layoutY="38.0" prefHeight="46.0" text="Create an account" textFill="#1a1a1a" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="28.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" layoutX="14.0" layoutY="427.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" maxHeight="50.0" onMouseClicked="#handleAuth" prefHeight="100.0" prefWidth="160.0">
+                                                         <children>
+                                                            <Label text="Next" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="but" />
+                                                            <String fx:value="circle_orange" />
+                                                         </styleClass>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" layoutX="14.0" layoutY="492.0" prefHeight="16.0" prefWidth="200.0" spacing="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <children>
+                                                      <Label text="Already have an account?" textFill="#4b5563">
+                                                         <font>
+                                                            <Font name="SansSerif Regular" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label onMouseClicked="#login" styleClass="orange_links" text="Login" textFill="#ff6a28">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <VBox layoutX="47.0" layoutY="106.0" prefHeight="310.0" prefWidth="100.0" spacing="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <children>
+                                                      <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                         <children>
+                                                            <Label prefHeight="19.0" text="Full name" textFill="#1a1a1a">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="17.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="f_name" prefHeight="34.0" promptText="Name">
+                                                               <font>
+                                                                  <Font name="SansSerif Regular" size="16.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="log_field" />
+                                                                  <String fx:value="box_text" />
+                                                               </styleClass>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                         <children>
+                                                            <Label prefHeight="19.0" text="Student number" textFill="#1a1a1a">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="17.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="stud_number" prefHeight="34.0" promptText="Student number">
+                                                               <font>
+                                                                  <Font name="SansSerif Regular" size="16.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="log_field" />
+                                                                  <String fx:value="box_text" />
+                                                               </styleClass>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                         <children>
+                                                            <Label prefHeight="19.0" text="Email" textFill="#1a1a1a">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="17.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="stud_email" prefHeight="34.0" promptText="Student email">
+                                                               <font>
+                                                                  <Font name="SansSerif Regular" size="16.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="log_field" />
+                                                                  <String fx:value="box_text" />
+                                                               </styleClass>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                         <children>
+                                                            <Label prefHeight="19.0" text="Phone number" textFill="#1a1a1a">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="17.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="phone_num" prefHeight="34.0">
+                                                               <font>
+                                                                  <Font name="SansSerif Regular" size="16.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="log_field" />
+                                                                  <String fx:value="box_text" />
+                                                               </styleClass>
+                                                            </TextField>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </HBox>
                                  </children>
                               </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Pane fx:id="auth_pane" maxHeight="330.0" maxWidth="390.0" prefHeight="200.0" prefWidth="390.0" styleClass="auth" stylesheets="@main.css">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="390.0" spacing="10.0" styleClass="auth_top">
+                           <children>
+                              <HBox alignment="CENTER" maxHeight="45.0" prefHeight="100.0" prefWidth="45.0" styleClass="circle_logo">
+                                 <children>
+                                    <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../ChatGPT%20Image%20Aug%208,%202025,%2001_00_55%20AM-Photoroom.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Label text="Authentication" textFill="#1a1a1a">
+                                 <font>
+                                    <Font name="SansSerif Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></HBox>
+                        <Label alignment="CENTER" layoutY="84.0" maxWidth="390.0" prefWidth="390.0" text="We've sent you a code" textAlignment="CENTER">
+                           <font>
+                              <Font name="SansSerif Bold" size="19.0" />
+                           </font></Label>
+                        <Label fx:id="sent_text" alignment="CENTER" layoutY="122.0" prefHeight="20.0" prefWidth="390.0" text="The code was sent to">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="155.0" prefHeight="75.0" prefWidth="390.0">
+                           <children>
+                              <TextField fx:id="auth1" alignment="CENTER" prefHeight="68.0" prefWidth="68.0" styleClass="auth_box" stylesheets="@main.css">
+                                 <HBox.margin>
+                                    <Insets left="35.0" right="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="auth2" alignment="CENTER" prefHeight="68.0" prefWidth="68.0" styleClass="auth_box">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="auth3" alignment="CENTER" prefHeight="68.0" prefWidth="68.0" styleClass="auth_box">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="auth4" alignment="CENTER" prefHeight="68.0" prefWidth="68.0" styleClass="auth_box">
+                                 <HBox.margin>
+                                    <Insets right="35.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutY="254.0" prefHeight="39.0" prefWidth="390.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#goToPart2" prefHeight="39.0" prefWidth="100.0" styleClass="but" text="Submit" textFill="WHITE">
+                                 <font>
+                                    <Font name="SansSerif Bold" size="15.0" />
+                                 </font>
+                              </Button>
                            </children>
                         </HBox>
                      </children>
-                  </AnchorPane>
+                  </Pane>
                </children>
-            </AnchorPane>
+            </StackPane>
          </children>
       </HBox>
    </children>

@@ -9,7 +9,7 @@ public class DBConnection {
         public static Connection connect() {
         Connection con = null;
         try {
-            String URL = "jdbc:mysql://127.0.0.1:3306/p2p_app?serverTimezone=UTC";
+            String URL = "jdbc:mysql://localhost:3306/p2p_app?serverTimezone=Africa/Johannesburg";
             String Username = "teamuser";
             String Password = "1234";
             
