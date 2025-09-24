@@ -27,7 +27,7 @@
                <children>
                   <AnchorPane maxHeight="733.0" prefHeight="600.0" prefWidth="1074.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.layout.AnchorPane?&gt;&lt;AnchorPane maxHeight=&quot;600.0&quot; prefHeight=&quot;200.0&quot; prefWidth=&quot;1000.0&quot; rotate=&quot;-8.0&quot; style=&quot;-fx-background-color: FFC857; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-width: 1px; -fx-border-color: #1E2A38;&quot; xmlns=&quot;http://javafx.com/javafx/24.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
                      <children>
-                        <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" rotate="-8.0" style="-fx-background-color: FFC857;" styleClass="accent1" stylesheets="@main.css" />
+                        <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" rotate="-8.0" style="-fx-background-color: FFC857;" styleClass="log_cards" stylesheets="@main.css" />
                         <AnchorPane layoutX="37.0" layoutY="66.0" maxHeight="600.0" prefHeight="600.0" prefWidth="1000.0" styleClass="log_cards" stylesheets="@main.css">
                            <children>
                               <HBox layoutX="114.0" layoutY="64.0" prefHeight="60.0" prefWidth="200.0" styleClass="log_top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

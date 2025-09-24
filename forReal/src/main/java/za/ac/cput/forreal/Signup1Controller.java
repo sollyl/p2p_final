@@ -11,7 +11,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import za.ac.cput.forreal.abstractBase.base;
-import static za.ac.cput.forreal.abstractBase.base.abstractBase.setCurrentUser;
 import za.ac.cput.forreal.databaseManager.DBConnection;
 import za.ac.cput.forreal.databaseManager.OTPManager;
 import za.ac.cput.forreal.databaseManager.UserManager;
@@ -100,7 +99,7 @@ public class Signup1Controller extends base implements Initializable {
         if (otpCode != null) {
             tempStudentNumber = num;
             tempEmail = email;
-            showAlert(main_vibe,"Success", "OTP sent to your email!");
+            showAlertGreen(main_vibe,"Success", "OTP sent to your email!");
             return true;
         } else {
             showAlert(main_vibe,"Error", "Failed to generate OTP. Please try again.");
