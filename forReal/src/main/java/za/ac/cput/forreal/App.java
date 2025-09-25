@@ -19,7 +19,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
 
-        Parent root = FXMLLoader.load(getClass().getResource("signup1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(root);
 
         primaryStage.setScene(scene);
@@ -64,7 +64,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        DBInitializer.initializeDB();
+        //DBInitializer.initializeDB();
         launch();
     }
 }

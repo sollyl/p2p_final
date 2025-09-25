@@ -109,24 +109,33 @@ public class Signup1Controller extends base implements Initializable {
     }
     
     private boolean createTemporaryUser(String phone, String fullName) {
-        // This creates a user but marks them as not completed registration
-        String sql = "INSERT INTO users (student_number, phone, full_name, registration_complete) " +
-                   "VALUES (?, ?, ?, FALSE)";
-        
-        try (var con = DBConnection.connect();
-             var pstmt = con.prepareStatement(sql)) {
-            
-            pstmt.setString(1, tempStudentNumber);
-            pstmt.setString(2, phone);
-            pstmt.setString(3, fullName);
-            
-            return pstmt.executeUpdate() > 0;
-            
-        } catch (Exception e) {
-            System.err.println("Error creating temporary user: " + e.getMessage());
-            return false;
+    // SQL to delete any incomplete registration for this student
+    String sqlDelete = "DELETE FROM users WHERE student_number = ? AND registration_complete = FALSE";
+    String sqlInsert = "INSERT INTO users (student_number, phone, full_name, registration_complete) " +
+                       "VALUES (?, ?, ?, FALSE)";
+
+    try (var con = DBConnection.connect()) {
+
+        // Step 1: Delete incomplete registration if exists
+        try (var deleteStmt = con.prepareStatement(sqlDelete)) {
+            deleteStmt.setString(1, tempStudentNumber);
+            deleteStmt.executeUpdate(); // execute delete
         }
+
+        // Step 2: Insert fresh temporary user
+        try (var insertStmt = con.prepareStatement(sqlInsert)) {
+            insertStmt.setString(1, tempStudentNumber);
+            insertStmt.setString(2, phone);
+            insertStmt.setString(3, fullName);
+            return insertStmt.executeUpdate() > 0;
+        }
+
+    } catch (Exception e) {
+        System.err.println("Error creating temporary user: " + e.getMessage());
+        return false;
     }
+}
+
     
     private void completeRegistration(MouseEvent event) {
         String phone = phone_num.getText().trim();
