@@ -13,19 +13,30 @@ import javafx.stage.Stage;
 import za.ac.cput.forreal.App;
 
 public abstract class base {
-    public abstract class abstractBase {
 
     protected static String currentStudentNumber;
+    protected static String currentUsername;
     
     public static void setCurrentUser(String studentNumber) {
         currentStudentNumber = studentNumber;
     }
-    
+
     public static String getCurrentStudentNumber() {
         return currentStudentNumber;
     }
+
+    public static void setCurrentUsername(String username) {
+        currentUsername = username;
     }
 
+    public static String getCurrentUsername() {
+        return currentUsername;
+    }
+
+    public static boolean isUserLoggedIn() {
+        return currentUsername != null && !currentUsername.trim().isEmpty();
+    }
+    
     protected void loadScene(String fxmlFile) throws IOException {
         Stage stage = App.getPrimaryStage();
         Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
@@ -85,7 +96,33 @@ public abstract class base {
         msgLabel.setStyle("-fx-font-size: 14px;-fx-padding: 5 0;");
         msgLabel.setWrapText(true);
         Button okBtn = new Button("OK");
-        okBtn.setStyle("-fx-font-size: 13px; -fx-padding: 5 20;"); 
+        okBtn.setStyle("-fx-font-size: 13px; -fx-padding: 5 20; -fx-background-color: #B22222; -fx-text-fill: white;"); 
+        okBtn.setOnAction(e -> root.getChildren().remove(overlay));
+
+        box.getChildren().addAll(titleLabel, msgLabel, okBtn);
+
+        overlay.getChildren().add(box);
+        box.layoutXProperty().bind(overlay.widthProperty().subtract(box.widthProperty()).divide(2));
+        box.layoutYProperty().bind(overlay.heightProperty().subtract(box.heightProperty()).divide(2));
+
+        root.getChildren().add(overlay);
+    }
+    
+    public static void showAlertGreen(Pane root, String title, String message) {
+        Pane overlay = new Pane();
+        overlay.setStyle("-fx-background-color: rgba(0,0,0,0.4);");
+        overlay.setPrefSize(root.getWidth(), root.getHeight());
+
+        VBox box = new VBox(10);
+        box.setStyle("-fx-background-color: white; -fx-border-color: #22B255; -fx-border-width: 2; "
+                + "-fx-padding: 20; -fx-alignment: center; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, #008B5B, 3, 0.3, 0, 0.8);");
+        Label titleLabel = new Label(title);
+        titleLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: #22B255; -fx-font-weight: bold;");
+        Label msgLabel = new Label(message);
+        msgLabel.setStyle("-fx-font-size: 14px;-fx-padding: 5 0;");
+        msgLabel.setWrapText(true);
+        Button okBtn = new Button("OK");
+        okBtn.setStyle("-fx-font-size: 13px; -fx-padding: 5 20;-fx-background-color: #22B255;-fx-text-fill: white;"); 
         okBtn.setOnAction(e -> root.getChildren().remove(overlay));
 
         box.getChildren().addAll(titleLabel, msgLabel, okBtn);
