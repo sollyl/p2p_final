@@ -167,9 +167,9 @@ public class DBInitializer {
 
     private static void insertSampleMarks(Statement stmt) throws SQLException {
         String[] marks = {
-            "('230123872', 'ADF1', 76)",
-            "('230123872', 'MUF1', 63)",
-            "('230123872', 'PRG1', 88)"
+            "('230123872', 'ADP2', 76)",
+            "('230123872', 'INM2', 63)",
+            "('230123872', 'PRT2', 88)"
         };
         for (String mark : marks) {
             stmt.execute("INSERT INTO marks (student_number, module_code, mark) VALUES " + mark);

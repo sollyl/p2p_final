@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.Step2Controller">
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.Step2Controller">
    <children>
       <ImageView fitHeight="890.0" fitWidth="1591.0" layoutX="-16.0" layoutY="-15.0" pickOnBounds="true">
          <image>
@@ -117,7 +118,7 @@
                                           </HBox>
                                           <AnchorPane layoutX="45.0" layoutY="427.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                              <children>
-                                                <Label layoutX="23.0" layoutY="24.0" onMouseClicked="#step3" style="-fx-text-fill: FF6A28;" text="Skip for now" AnchorPane.bottomAnchor="23.999999999999993" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
+                                                <Label layoutX="23.0" layoutY="24.0" onMouseClicked="#skipThrough" style="-fx-text-fill: FF6A28;" text="Skip for now" AnchorPane.bottomAnchor="23.999999999999993" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
                                                    <font>
                                                       <Font name="SansSerif Bold" size="13.0" />
                                                    </font>
@@ -129,11 +130,11 @@
                                                 </Button>
                                              </children>
                                           </AnchorPane>
-                                          <ScrollPane fx:id="scroller" layoutX="125.0" layoutY="140.0" prefHeight="238.0" prefWidth="442.0" styleClass="scrolly" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                          <ScrollPane fx:id="scroller" layoutX="125.0" layoutY="140.0" prefHeight="238.0" prefWidth="470.0" styleClass="scrolly" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-30.0">
                                              <content>
-                                                <VBox prefHeight="238.0" prefWidth="440.0">
+                                                <VBox fx:id="module_box" prefHeight="238.0" prefWidth="440.0" spacing="6.0">
                                                    <children>
-                                                      <VBox prefHeight="65.0" prefWidth="100.0" spacing="11.0">
+                                                      <VBox fx:id="manualBox" prefHeight="65.0" prefWidth="100.0" spacing="11.0" VBox.vgrow="NEVER">
                                                          <children>
                                                             <Label prefHeight="19.0" text="Choose your module" textFill="#1a1a1a">
                                                                <font>
@@ -142,10 +143,11 @@
                                                             </Label>
                                                             <HBox prefHeight="100.0" prefWidth="200.0" spacing="17.0">
                                                                <children>
-                                                                  <ComboBox prefHeight="34.0" prefWidth="295.0">
+                                                                  <ComboBox fx:id="combo_2" prefHeight="34.0" prefWidth="295.0">
                                                                      <styleClass>
                                                                         <String fx:value="log_field" />
                                                                         <String fx:value="box_text" />
+                                                                        <String fx:value="step_combo" />
                                                                      </styleClass>
                                                                   </ComboBox>
                                                                   <TextField alignment="CENTER" prefHeight="34.0" prefWidth="45.0" promptText="Mark">
@@ -154,7 +156,7 @@
                                                                         <String fx:value="step_mark" />
                                                                      </styleClass>
                                                                   </TextField>
-                                                                  <Button mnemonicParsing="false" onMouseClicked="#deleteModule" prefHeight="34.0" prefWidth="64.0" styleClass="but" text="Delete" textFill="WHITE" textOverrun="CLIP">
+                                                                  <Button fx:id="delete_man" mnemonicParsing="false" onMouseClicked="#deleteModule" prefHeight="34.0" prefWidth="64.0" styleClass="but" text="Delete" textFill="WHITE" textOverrun="CLIP">
                                                                      <font>
                                                                         <Font name="SansSerif Bold" size="14.0" />
                                                                      </font>
@@ -162,11 +164,17 @@
                                                                </children>
                                                             </HBox>
                                                          </children>
+                                                         <opaqueInsets>
+                                                            <Insets bottom="10.0" />
+                                                         </opaqueInsets>
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" />
+                                                         </VBox.margin>
                                                       </VBox>
                                                    </children>
                                                 </VBox>
                                              </content></ScrollPane>
-                                          <Button layoutX="203.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#addModules" prefHeight="34.0" prefWidth="34.0" styleClass="but" text="+" textFill="WHITE">
+                                          <Button layoutX="203.0" layoutY="382.0" mnemonicParsing="false" onAction="#addRow" onMouseClicked="#addModules" prefHeight="34.0" prefWidth="34.0" styleClass="but" text="+" textFill="WHITE">
                                              <font>
                                                 <Font name="SansSerif Bold" size="18.0" />
                                              </font>

@@ -7,12 +7,12 @@
 }
 
 .back_ground{
-    -fx-background-color: #1E2A38;
+    -fx-background-color: #1E2A38; /*backgrounds*/
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2.5, 0, 0, 2.5);
 }
 
 .accent1{
-    -fx-background-color: #FFC857;
+    -fx-background-color: #FFC857; /*peach accent*/
 }
 
 .circle{
@@ -24,7 +24,7 @@
 }
 
 .underLine_land{
-    -fx-text-fill: #FF6A28;
+    -fx-text-fill: #FF6A28; /*primary*/
     -fx-underline: true;
 }
 
@@ -283,4 +283,31 @@
     -fx-effect: dropshadow(three-pass-box, rgba(255, 106, 40, 0.4), 6, 0.0, 0, 0);
 }
 
+.step_combo{
+     -fx-font-size: 13px;
+     -fx-font-family: "Sans-Serif";
+}
 
+.step_combo .list-cell:hover{
+    -fx-background-color: #FF6A28;
+    -fx-text-fill: white;
+}
+
+.step_combo .list-view{
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #ddd;      /* wider dropdown */
+    -fx-max-height: 250px;
+}
+
+.step_combo .scroll-bar{
+    -fx-background-color: transparent;
+}
+
+.step_combo .list-cell{
+    -fx-transition: background-color 0.2s ease-in-out;
+}
+
+.clickable{
+    
+}
