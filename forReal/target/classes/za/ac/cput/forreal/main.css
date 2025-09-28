@@ -7,15 +7,15 @@
 }
 
 .back_ground{
-    -fx-background-color: #1E2A38;
+    -fx-background-color: #1E2A38; /*backgrounds*/
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2.5, 0, 0, 2.5);
 }
 
 .accent1{
-    -fx-background-color: #FFC857;
+    -fx-background-color: #FFC857; /*peach accent*/
 }
 
-.circle{
+    .circle{
     -fx-background-radius: 100;
 }
 .hover{
@@ -24,7 +24,7 @@
 }
 
 .underLine_land{
-    -fx-text-fill: #FF6A28;
+    -fx-text-fill: #FF6A28; /*primary*/
     -fx-underline: true;
 }
 
@@ -283,4 +283,127 @@
     -fx-effect: dropshadow(three-pass-box, rgba(255, 106, 40, 0.4), 6, 0.0, 0, 0);
 }
 
+.step_combo{
+     -fx-font-size: 13px;
+     -fx-font-family: "Sans-Serif";
+}
 
+.step_combo .list-cell:hover{
+    -fx-background-color: #FF6A28;
+    -fx-text-fill: white;
+}
+
+.step_combo .list-view{
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #ddd;      /* wider dropdown */
+    -fx-max-height: 250px;
+}
+
+.step_combo .scroll-bar{
+    -fx-background-color: transparent;
+}
+
+.step_combo .list-cell{
+    -fx-transition: background-color 0.2s ease-in-out;
+}
+
+.clickable{
+    
+}
+
+
+/*Main pages vibes*/
+
+.left_logo{
+    -fx-border-color: transparent transparent #374151 transparent; /* top right bottom left */
+    -fx-border-width: 0 0 1px 0;
+}
+.main_high{
+    -fx-background-color: #FF6A28;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px; 
+    -fx-border-color: transparent;
+    -fx-text-fill: white;  
+}
+
+.accord{
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+
+.accord > .titled-pane {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.2, 0, 2);
+    -fx-padding: 0;
+    -fx-padding: 0 0 12px 0;
+}
+
+
+.accord > .titled-pane > .title {
+    -fx-background-color: transparent;
+}
+.accord .titled-pane > .content {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+}
+
+.accord .titled-pane > .title > .text {
+    -fx-fill: white;
+    -fx-text-fill: white;
+}
+.accord .titled-pane > .title > .arrow-button > .arrow {
+    -fx-background-color: white;
+}
+
+.choose{
+    -fx-background-color: rgba(255,106,40,0.2); /* FF6A28 @ 20% */
+    -fx-border-color: transparent transparent transparent #FF6A28;
+    -fx-border-width: 0 0 0 4;
+}
+.main_top{
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #E5E7EB transparent; /* top right bottom left */
+    -fx-border-width: 0 0 1px 0;
+}
+
+.head_text_on_white{
+    -fx-text-fill: #1F2937;
+}
+
+.mypane > Label {
+    -fx-text-fill: white;
+}
+
+.mypane >HBox > SVGPath {
+    -fx-fill: white;
+}
+
+/* Normal state */
+.mypane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Hover state */
+.mypane:hover {
+    -fx-background-color: #FF6A28;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: transparent;
+}
+
+/* Hovered child Label */
+.mypane:hover Label {
+    -fx-text-fill: white;
+}
+
+/* Hovered child SVGPath */
+.mypane:hover SVGPath {
+    -fx-fill: white;
+}

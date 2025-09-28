@@ -16,6 +16,7 @@ public abstract class base {
 
     protected static String currentStudentNumber;
     protected static String currentUsername;
+    protected static String currentUserRole;
     
     public static void setCurrentUser(String studentNumber) {
         currentStudentNumber = studentNumber;
@@ -31,6 +32,14 @@ public abstract class base {
 
     public static String getCurrentUsername() {
         return currentUsername;
+    }
+    
+    public static void setCurrentUserRole(String role) {
+        currentUserRole = role;
+    }
+
+    public static String getCurrentUserRole() {
+        return currentUserRole;
     }
 
     public static boolean isUserLoggedIn() {
