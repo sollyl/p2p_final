@@ -98,6 +98,7 @@ public class DBInitializer {
             "full_name VARCHAR(100) NOT NULL, " +
             "phone VARCHAR(20) UNIQUE, " +
             "is_tutor BOOLEAN DEFAULT FALSE, " +
+            "logged_in_as VARCHAR(10) DEFAULT 'USER', " +
             "registration_complete BOOLEAN DEFAULT FALSE, " +
             "reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, " +
             "last_login TIMESTAMP, " +

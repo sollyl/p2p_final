@@ -111,6 +111,7 @@ public class Step1Controller extends base implements Initializable {
             showAlert(main, "Error", "Please select your role");
             return;
         }
+        setCurrentUserRole(role.toUpperCase());
         loadScene("step2.fxml");
     }
     

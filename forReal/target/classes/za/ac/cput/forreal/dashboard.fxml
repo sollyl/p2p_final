@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.DashboardController">
+   <children>
+      <AnchorPane layoutX="33.0" layoutY="95.0" prefHeight="200.0" prefWidth="265.0" styleClass="back_ground" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="86.0" prefWidth="265.0" styleClass="left_logo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="265.0" spacing="13.0" stylesheets="@main.css">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="45.0" maxWidth="45.0" prefHeight="45.0" prefWidth="45.0" styleClass="circle_logo" stylesheets="@main.css">
+                           <children>
+                              <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../ChatGPT%20Image%20Aug%208,%202025,%2001_00_55%20AM-Photoroom.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Label text="P2P Tutoring" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="14.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="33.0" layoutY="199.0" prefHeight="200.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="16.0" prefHeight="48.0" prefWidth="230.0" spacing="9.0" styleClass="main_high">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                           <children>
+                              <SVGPath content="M5 20V10.85L2.2 13L1 11.4L12 3L16 6.05V4H19V8.35L23 11.4L21.8 13L19 10.85V20H14V14H10V20H5ZM10 10.025H14C14 9.49167 13.8 9.05417 13.4 8.7125C13 8.37083 12.5333 8.2 12 8.2C11.4667 8.2 11 8.37083 10.6 8.7125C10.2 9.05417 10 9.49167 10 10.025Z" fill="WHITE" />
+                           </children>
+                        </HBox>
+                        <Label text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="12.0" />
+                     </padding></HBox>
+                  <VBox layoutX="18.0" layoutY="80.0" prefHeight="400.0" prefWidth="230.0" spacing="8.0">
+                     <children>
+                        <Accordion prefWidth="247.0" styleClass="accord">
+                          <panes>
+                            <TitledPane animated="false" text="Learning hub">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M1 20V16C1 15.4333 1.19583 14.9583 1.5875 14.575C1.97917 14.1917 2.45 14 3 14H6.275C6.60833 14 6.925 14.0833 7.225 14.25C7.525 14.4167 7.76667 14.6417 7.95 14.925C8.43333 15.575 9.02917 16.0833 9.7375 16.45C10.4458 16.8167 11.2 17 12 17C12.8167 17 13.5792 16.8167 14.2875 16.45C14.9958 16.0833 15.5833 15.575 16.05 14.925C16.2667 14.6417 16.5208 14.4167 16.8125 14.25C17.1042 14.0833 17.4083 14 17.725 14H21C21.5667 14 22.0417 14.1917 22.425 14.575C22.8083 14.9583 23 15.4333 23 16V20H16V17.725C15.4167 18.1417 14.7875 18.4583 14.1125 18.675C13.4375 18.8917 12.7333 19 12 19C11.2833 19 10.5833 18.8875 9.9 18.6625C9.21667 18.4375 8.58333 18.1167 8 17.7V20H1ZM12 16C11.3667 16 10.7667 15.8542 10.2 15.5625C9.63333 15.2708 9.15833 14.8667 8.775 14.35C8.49167 13.9333 8.1375 13.6042 7.7125 13.3625C7.2875 13.1208 6.825 13 6.325 13C6.69167 12.3833 7.46667 11.8958 8.65 11.5375C9.83333 11.1792 10.95 11 12 11C13.05 11 14.1667 11.1792 15.35 11.5375C16.5333 11.8958 17.3083 12.3833 17.675 13C17.1917 13 16.7333 13.1208 16.3 13.3625C15.8667 13.6042 15.5083 13.9333 15.225 14.35C14.8583 14.8833 14.3917 15.2917 13.825 15.575C13.2583 15.8583 12.65 16 12 16ZM4 13C3.16667 13 2.45833 12.7083 1.875 12.125C1.29167 11.5417 1 10.8333 1 10C1 9.15 1.29167 8.4375 1.875 7.8625C2.45833 7.2875 3.16667 7 4 7C4.85 7 5.5625 7.2875 6.1375 7.8625C6.7125 8.4375 7 9.15 7 10C7 10.8333 6.7125 11.5417 6.1375 12.125C5.5625 12.7083 4.85 13 4 13ZM20 13C19.1667 13 18.4583 12.7083 17.875 12.125C17.2917 11.5417 17 10.8333 17 10C17 9.15 17.2917 8.4375 17.875 7.8625C18.4583 7.2875 19.1667 7 20 7C20.85 7 21.5625 7.2875 22.1375 7.8625C22.7125 8.4375 23 9.15 23 10C23 10.8333 22.7125 11.5417 22.1375 12.125C21.5625 12.7083 20.85 13 20 13ZM12 10C11.1667 10 10.4583 9.70833 9.875 9.125C9.29167 8.54167 9 7.83333 9 7C9 6.15 9.29167 5.4375 9.875 4.8625C10.4583 4.2875 11.1667 4 12 4C12.85 4 13.5625 4.2875 14.1375 4.8625C14.7125 5.4375 15 6.15 15 7C15 7.83333 14.7125 8.54167 14.1375 9.125C13.5625 9.70833 12.85 10 12 10Z" fill="#ffc857" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Community" textFill="#ffc857">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M18 14V11H15V9H18V6H20V9H23V11H20V14H18ZM9 12C7.9 12 6.95833 11.6083 6.175 10.825C5.39167 10.0417 5 9.1 5 8C5 6.9 5.39167 5.95833 6.175 5.175C6.95833 4.39167 7.9 4 9 4C10.1 4 11.0417 4.39167 11.825 5.175C12.6083 5.95833 13 6.9 13 8C13 9.1 12.6083 10.0417 11.825 10.825C11.0417 11.6083 10.1 12 9 12ZM1 20V17.2C1 16.6333 1.14583 16.1125 1.4375 15.6375C1.72917 15.1625 2.11667 14.8 2.6 14.55C3.63333 14.0333 4.68333 13.6458 5.75 13.3875C6.81667 13.1292 7.9 13 9 13C10.1 13 11.1833 13.1292 12.25 13.3875C13.3167 13.6458 14.3667 14.0333 15.4 14.55C15.8833 14.8 16.2708 15.1625 16.5625 15.6375C16.8542 16.1125 17 16.6333 17 17.2V20H1Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Connections" textFill="#ffc857">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="92.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0" styleClass="myPane">
+                                                   <children>
+                                                      <SVGPath content="M1 20V17.2C1 16.6333 1.14583 16.1125 1.4375 15.6375C1.72917 15.1625 2.11667 14.8 2.6 14.55C3.63333 14.0333 4.68333 13.6458 5.75 13.3875C6.81667 13.1292 7.9 13 9 13C10.1 13 11.1833 13.1292 12.25 13.3875C13.3167 13.6458 14.3667 14.0333 15.4 14.55C15.8833 14.8 16.2708 15.1625 16.5625 15.6375C16.8542 16.1125 17 16.6333 17 17.2V20H1ZM19 20V17C19 16.2667 18.7958 15.5625 18.3875 14.8875C17.9792 14.2125 17.4 13.6333 16.65 13.15C17.5 13.25 18.3 13.4208 19.05 13.6625C19.8 13.9042 20.5 14.2 21.15 14.55C21.75 14.8833 22.2083 15.2542 22.525 15.6625C22.8417 16.0708 23 16.5167 23 17V20H19ZM9 12C7.9 12 6.95833 11.6083 6.175 10.825C5.39167 10.0417 5 9.1 5 8C5 6.9 5.39167 5.95833 6.175 5.175C6.95833 4.39167 7.9 4 9 4C10.1 4 11.0417 4.39167 11.825 5.175C12.6083 5.95833 13 6.9 13 8C13 9.1 12.6083 10.0417 11.825 10.825C11.0417 11.6083 10.1 12 9 12ZM19 8C19 9.1 18.6083 10.0417 17.825 10.825C17.0417 11.6083 16.1 12 15 12C14.8167 12 14.5833 11.9792 14.3 11.9375C14.0167 11.8958 13.7833 11.85 13.6 11.8C14.05 11.2667 14.3958 10.675 14.6375 10.025C14.8792 9.375 15 8.7 15 8C15 7.3 14.8792 6.625 14.6375 5.975C14.3958 5.325 14.05 4.73333 13.6 4.2C13.8333 4.11667 14.0667 4.0625 14.3 4.0375C14.5333 4.0125 14.7667 4 15 4C16.1 4 17.0417 4.39167 17.825 5.175C18.6083 5.95833 19 6.9 19 8Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Request a buddy" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="136.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M4 21C3.45 21 2.97917 20.8042 2.5875 20.4125C2.19583 20.0208 2 19.55 2 19V8C2 7.45 2.19583 6.97917 2.5875 6.5875C2.97917 6.19583 3.45 6 4 6H8V4C8 3.45 8.19583 2.97917 8.5875 2.5875C8.97917 2.19583 9.45 2 10 2H14C14.55 2 15.0208 2.19583 15.4125 2.5875C15.8042 2.97917 16 3.45 16 4V6H20C20.55 6 21.0208 6.19583 21.4125 6.5875C21.8042 6.97917 22 7.45 22 8V19C22 19.55 21.8042 20.0208 21.4125 20.4125C21.0208 20.8042 20.55 21 20 21H4ZM10 6H14V4H10V6Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Hire a tutor" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="180.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M2 22V4C2 3.45 2.19583 2.97917 2.5875 2.5875C2.97917 2.19583 3.45 2 4 2H20C20.55 2 21.0208 2.19583 21.4125 2.5875C21.8042 2.97917 22 3.45 22 4V16C22 16.55 21.8042 17.0208 21.4125 17.4125C21.0208 17.8042 20.55 18 20 18H6L2 22Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Messages" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Progress">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M16 20V13H20V20H16ZM10 20V4H14V20H10ZM4 20V9H8V20H4Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Performance" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M13.75 19C13.4667 19 13.2292 18.9042 13.0375 18.7125C12.8458 18.5208 12.75 18.2833 12.75 18V6C12.75 5.71667 12.8458 5.47917 13.0375 5.2875C13.2292 5.09583 13.4667 5 13.75 5H15.125C15.4083 5 15.6458 5.09583 15.8375 5.2875C16.0292 5.47917 16.125 5.71667 16.125 6V18C16.125 18.2833 16.0292 18.5208 15.8375 18.7125C15.6458 18.9042 15.4083 19 15.125 19H13.75ZM8.875 19C8.59167 19 8.35417 18.9042 8.1625 18.7125C7.97083 18.5208 7.875 18.2833 7.875 18V6C7.875 5.71667 7.97083 5.47917 8.1625 5.2875C8.35417 5.09583 8.59167 5 8.875 5H10.25C10.5333 5 10.7708 5.09583 10.9625 5.2875C11.1542 5.47917 11.25 5.71667 11.25 6V18C11.25 18.2833 11.1542 18.5208 10.9625 18.7125C10.7708 18.9042 10.5333 19 10.25 19H8.875ZM4 19C3.71667 19 3.47917 18.9042 3.2875 18.7125C3.09583 18.5208 3 18.2833 3 18V6C3 5.71667 3.09583 5.47917 3.2875 5.2875C3.47917 5.09583 3.71667 5 4 5H5.375C5.65833 5 5.89583 5.09583 6.0875 5.2875C6.27917 5.47917 6.375 5.71667 6.375 6V18C6.375 18.2833 6.27917 18.5208 6.0875 18.7125C5.89583 18.9042 5.65833 19 5.375 19H4ZM18.625 19C18.3417 19 18.1042 18.9042 17.9125 18.7125C17.7208 18.5208 17.625 18.2833 17.625 18V6C17.625 5.71667 17.7208 5.47917 17.9125 5.2875C18.1042 5.09583 18.3417 5 18.625 5H20C20.2833 5 20.5208 5.09583 20.7125 5.2875C20.9042 5.47917 21 5.71667 21 6V18C21 18.2833 20.9042 18.5208 20.7125 18.7125C20.5208 18.9042 20.2833 19 20 19H18.625Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Timetable" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="92.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M12 14C11.7167 14 11.4792 13.9042 11.2875 13.7125C11.0958 13.5208 11 13.2833 11 13C11 12.7167 11.0958 12.4792 11.2875 12.2875C11.4792 12.0958 11.7167 12 12 12C12.2833 12 12.5208 12.0958 12.7125 12.2875C12.9042 12.4792 13 12.7167 13 13C13 13.2833 12.9042 13.5208 12.7125 13.7125C12.5208 13.9042 12.2833 14 12 14ZM8 14C7.71667 14 7.47917 13.9042 7.2875 13.7125C7.09583 13.5208 7 13.2833 7 13C7 12.7167 7.09583 12.4792 7.2875 12.2875C7.47917 12.0958 7.71667 12 8 12C8.28333 12 8.52083 12.0958 8.7125 12.2875C8.90417 12.4792 9 12.7167 9 13C9 13.2833 8.90417 13.5208 8.7125 13.7125C8.52083 13.9042 8.28333 14 8 14ZM16 14C15.7167 14 15.4792 13.9042 15.2875 13.7125C15.0958 13.5208 15 13.2833 15 13C15 12.7167 15.0958 12.4792 15.2875 12.2875C15.4792 12.0958 15.7167 12 16 12C16.2833 12 16.5208 12.0958 16.7125 12.2875C16.9042 12.4792 17 12.7167 17 13C17 13.2833 16.9042 13.5208 16.7125 13.7125C16.5208 13.9042 16.2833 14 16 14ZM12 18C11.7167 18 11.4792 17.9042 11.2875 17.7125C11.0958 17.5208 11 17.2833 11 17C11 16.7167 11.0958 16.4792 11.2875 16.2875C11.4792 16.0958 11.7167 16 12 16C12.2833 16 12.5208 16.0958 12.7125 16.2875C12.9042 16.4792 13 16.7167 13 17C13 17.2833 12.9042 17.5208 12.7125 17.7125C12.5208 17.9042 12.2833 18 12 18ZM8 18C7.71667 18 7.47917 17.9042 7.2875 17.7125C7.09583 17.5208 7 17.2833 7 17C7 16.7167 7.09583 16.4792 7.2875 16.2875C7.47917 16.0958 7.71667 16 8 16C8.28333 16 8.52083 16.0958 8.7125 16.2875C8.90417 16.4792 9 16.7167 9 17C9 17.2833 8.90417 17.5208 8.7125 17.7125C8.52083 17.9042 8.28333 18 8 18ZM16 18C15.7167 18 15.4792 17.9042 15.2875 17.7125C15.0958 17.5208 15 17.2833 15 17C15 16.7167 15.0958 16.4792 15.2875 16.2875C15.4792 16.0958 15.7167 16 16 16C16.2833 16 16.5208 16.0958 16.7125 16.2875C16.9042 16.4792 17 16.7167 17 17C17 17.2833 16.9042 17.5208 16.7125 17.7125C16.5208 17.9042 16.2833 18 16 18ZM5 22C4.45 22 3.97917 21.8042 3.5875 21.4125C3.19583 21.0208 3 20.55 3 20V6C3 5.45 3.19583 4.97917 3.5875 4.5875C3.97917 4.19583 4.45 4 5 4H6V2H8V4H16V2H18V4H19C19.55 4 20.0208 4.19583 20.4125 4.5875C20.8042 4.97917 21 5.45 21 6V20C21 20.55 20.8042 21.0208 20.4125 21.4125C20.0208 21.8042 19.55 22 19 22H5ZM5 20H19V10H5V20Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Calendar" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children></AnchorPane>
+                              </content>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Account">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Profile" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M10 14H14V12H10V14ZM10 11H18V9H10V11ZM10 8H18V6H10V8ZM8 18C7.45 18 6.97917 17.8042 6.5875 17.4125C6.19583 17.0208 6 16.55 6 16V4C6 3.45 6.19583 2.97917 6.5875 2.5875C6.97917 2.19583 7.45 2 8 2H20C20.55 2 21.0208 2.19583 21.4125 2.5875C21.8042 2.97917 22 3.45 22 4V16C22 16.55 21.8042 17.0208 21.4125 17.4125C21.0208 17.8042 20.55 18 20 18H8ZM4 22C3.45 22 2.97917 21.8042 2.5875 21.4125C2.19583 21.0208 2 20.55 2 20V6H4V20H18V22H4Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Resources" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="92.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                             <children>
+                                                <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                                   <children>
+                                                      <SVGPath content="M4 19V17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08333 5.2375 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.6458 2.72917 10.9375 2.4375C11.2292 2.14583 11.5833 2 12 2C12.4167 2 12.7708 2.14583 13.0625 2.4375C13.3542 2.72917 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.2375 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9792 21.8042 10.5875 21.4125C10.1958 21.0208 10 20.55 10 20H14C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22Z" fill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                                <Label text="Notifications" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children></AnchorPane>
+                              </content>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="24.0" text="Switch acoount" textFill="#ffc857" underline="true">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="297.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="16.0" prefHeight="86.0" prefWidth="1249.0" styleClass="main_top" stylesheets="@main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1212.0">
+                     <children>
+                        <VBox maxHeight="56.0" prefHeight="56.0" prefWidth="295.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="32.0" styleClass="head_text_on_white" text="Dashboard">
+                                 <font>
+                                    <Font name="SansSerif Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="24.0" text="Welcome back to your learning journey" textFill="#4b5563">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="44.0" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+                           <children>
+                              <HBox alignment="CENTER" maxHeight="40.0" prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: #4B5563;" styleClass="circle">
+                                 <children>
+                                    <ImageView fx:id="prof" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../../../meeting-mobile-phone-lesson-wall-college%201_page-0001.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label prefHeight="24.0" styleClass="head_text_on_white" text="Username">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="20.0" text="Student" textFill="#4b5563">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="44.0" prefHeight="100.0" prefWidth="195.0" spacing="23.0">
+                           <children>
+                              <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                 <children>
+                                    <SVGPath content="M4 19V17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08333 5.2375 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.6458 2.72917 10.9375 2.4375C11.2292 2.14583 11.5833 2 12 2C12.4167 2 12.7708 2.14583 13.0625 2.4375C13.3542 2.72917 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.2375 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9792 21.8042 10.5875 21.4125C10.1958 21.0208 10 20.55 10 20H14C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22Z" fill="#4b5563" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
+                                 <children>
+                                    <SVGPath content="M9.2502 22L8.8502 18.8C8.63353 18.7167 8.42936 18.6167 8.2377 18.5C8.04603 18.3833 7.85853 18.2583 7.6752 18.125L4.7002 19.375L1.9502 14.625L4.5252 12.675C4.50853 12.5583 4.5002 12.4458 4.5002 12.3375V11.6625C4.5002 11.5542 4.50853 11.4417 4.5252 11.325L1.9502 9.375L4.7002 4.625L7.6752 5.875C7.85853 5.74167 8.0502 5.61667 8.2502 5.5C8.4502 5.38333 8.6502 5.28333 8.8502 5.2L9.2502 2H14.7502L15.1502 5.2C15.3669 5.28333 15.571 5.38333 15.7627 5.5C15.9544 5.61667 16.1419 5.74167 16.3252 5.875L19.3002 4.625L22.0502 9.375L19.4752 11.325C19.4919 11.4417 19.5002 11.5542 19.5002 11.6625V12.3375C19.5002 12.4458 19.4835 12.5583 19.4502 12.675L22.0252 14.625L19.2752 19.375L16.3252 18.125C16.1419 18.2583 15.9502 18.3833 15.7502 18.5C15.5502 18.6167 15.3502 18.7167 15.1502 18.8L14.7502 22H9.2502ZM12.0502 15.5C13.0169 15.5 13.8419 15.1583 14.5252 14.475C15.2085 13.7917 15.5502 12.9667 15.5502 12C15.5502 11.0333 15.2085 10.2083 14.5252 9.525C13.8419 8.84167 13.0169 8.5 12.0502 8.5C11.0669 8.5 10.2377 8.84167 9.5627 9.525C8.8877 10.2083 8.5502 11.0333 8.5502 12C8.5502 12.9667 8.8877 13.7917 9.5627 14.475C10.2377 15.1583 11.0669 15.5 12.0502 15.5Z" fill="#4b5563" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="18.0" layoutY="86.0" prefHeight="64.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+               <children>
+                  <VBox layoutX="18.0" layoutY="18.0" prefHeight="64.0" prefWidth="386.0">
+                     <children>
+                        <HBox maxHeight="38.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label maxHeight="38.0" styleClass="head_text_on_white" stylesheets="@main.css" text="Hello there, Name!">
+                                 <font>
+                                    <Font name="SansSerif Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../hand%20wave%20(1).gif" />
+                                 </image></ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
