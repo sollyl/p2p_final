@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.DashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.TimetableController">
    <children>
       <AnchorPane layoutX="33.0" layoutY="95.0" prefHeight="200.0" prefWidth="265.0" styleClass="back_ground" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -44,7 +44,7 @@
             </HBox>
             <AnchorPane layoutX="33.0" layoutY="199.0" prefHeight="200.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="16.0" prefHeight="48.0" prefWidth="230.0" spacing="9.0" styleClass="main_high">
+                  <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="16.0" prefHeight="48.0" prefWidth="230.0" spacing="9.0" styleClass="mypane">
                      <children>
                         <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
                            <children>
@@ -59,14 +59,15 @@
                      </children>
                      <padding>
                         <Insets left="12.0" />
-                     </padding></HBox>
+                     </padding>
+                  </HBox>
                   <VBox layoutX="18.0" layoutY="80.0" prefHeight="400.0" prefWidth="230.0" spacing="8.0">
                      <children>
                         <Accordion prefWidth="247.0" styleClass="accord">
-                          <panes>
-                            <TitledPane animated="false" text="Learning hub">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="200.0">
+                           <panes>
+                              <TitledPane animated="false" text="Learning hub">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="200.0">
                                        <children>
                                           <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
                                              <children>
@@ -155,14 +156,14 @@
                                           </HBox>
                                        </children>
                                     </AnchorPane>
-                              </content>
+                                 </content>
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
-                            </TitledPane>
-                            <TitledPane animated="false" text="Progress">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
+                              </TitledPane>
+                              <TitledPane animated="false" text="Progress">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
                                        <children>
                                           <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
                                              <children>
@@ -181,7 +182,7 @@
                                                 <Insets left="12.0" />
                                              </padding>
                                           </HBox>
-                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="main_high">
                                              <children>
                                                 <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
                                                    <children>
@@ -215,15 +216,16 @@
                                                 <Insets left="12.0" />
                                              </padding>
                                           </HBox>
-                                       </children></AnchorPane>
-                              </content>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
-                            </TitledPane>
-                            <TitledPane animated="false" text="Account">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
+                              </TitledPane>
+                              <TitledPane animated="false" text="Account">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
                                        <children>
                                           <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
                                              <children>
@@ -276,13 +278,14 @@
                                                 <Insets left="12.0" />
                                              </padding>
                                           </HBox>
-                                       </children></AnchorPane>
-                              </content>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
-                            </TitledPane>
-                          </panes>
+                              </TitledPane>
+                           </panes>
                         </Accordion>
                         <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
                            <children>
@@ -310,12 +313,12 @@
                      <children>
                         <VBox maxHeight="56.0" prefHeight="56.0" prefWidth="295.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label prefHeight="32.0" styleClass="head_text_on_white" text="Dashboard">
+                              <Label prefHeight="32.0" styleClass="head_text_on_white" text="Timetable">
                                  <font>
                                     <Font name="SansSerif Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="24.0" text="Welcome back to your learning journey" textFill="#4b5563">
+                              <Label prefHeight="24.0" text="Create, edit, and save your weekly module schedule." textFill="#4b5563">
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
@@ -369,62 +372,9 @@
             </HBox>
             <AnchorPane layoutX="18.0" layoutY="86.0" prefHeight="64.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
                <children>
-                  <VBox layoutX="18.0" layoutY="18.0" prefHeight="64.0" prefWidth="550.0">
-                     <children>
-                        <HBox maxHeight="38.0" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label fx:id="display_fullName" maxHeight="38.0" styleClass="head_text_on_white" stylesheets="@main.css" text="Hello there, Name!">
-                                 <font>
-                                    <Font name="SansSerif Bold" size="30.0" />
-                                 </font>
-                              </Label>
-                              <HBox prefWidth="38.0">
-                                 <children>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../../../../../../../../../Downloads/Hand-2-1--unscreen.gif" />
-                                       </image>
-                                    </ImageView>
-                                 </children></HBox>
-                              
-                           </children>
-                        </HBox>
-                        <Label prefHeight="24.0" text="Ready to learn something new today?" textFill="#4b5563">
-                           <font>
-                              <Font name="SansSerif Regular" size="16.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <ScrollPane layoutX="18.0" layoutY="107.0" prefHeight="665.0" prefWidth="855.0" styleClass="scrolly" stylesheets="@main.css">
+                  <ScrollPane layoutX="18.0" layoutY="18.0" prefHeight="762.0" prefWidth="855.0" styleClass="scrolly" stylesheets="@main.css">
                      <content>
-                        <VBox prefHeight="664.0" prefWidth="855.0">
-                           <children>
-                              <AnchorPane prefHeight="168.0" prefWidth="200.0" styleClass="main_boxes">
-                                 <children>
-                                    <HBox alignment="CENTER_LEFT" layoutX="13.0" layoutY="24.0" prefHeight="28.0" prefWidth="830.0" spacing="12.0">
-                                       <children>
-                                          <SVGPath content="M15.3 16.7L16.7 15.3L13 11.6V7H11V12.4L15.3 16.7ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22Z" fill="#ff6a28" />
-                                          <Label maxHeight="28.0" styleClass="head_text_on_white" text="Today's Modules">
-                                             <font>
-                                                <Font name="SansSerif Bold" size="19.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                    </HBox>
-                                    <HBox fx:id="holds_modules" alignment="CENTER" layoutX="13.0" layoutY="59.0" prefHeight="76.0" prefWidth="830.0" spacing="10.0">
-                                       <children>
-                                          <Label text="No upcoming modules today. " textFill="#4b5563">
-                                             <font>
-                                                <Font name="SansSerif Regular" size="16.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </VBox>
+                        <VBox prefHeight="761.0" prefWidth="855.0" />
                      </content>
                   </ScrollPane>
                </children>
