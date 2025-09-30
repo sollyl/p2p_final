@@ -22,7 +22,7 @@ public class DBInitializer {
     }
 
     private static void dropTables(Statement stmt) {
-        String[] tables = {"marks", "users", "modules", "students", "sub_courses", "courses", "otps"};
+        String[] tables = {"timetable_slots", "marks", "users", "modules", "students", "sub_courses", "courses", "otps"};
 
         for (String table : tables) {
             try {
@@ -108,15 +108,32 @@ public class DBInitializer {
 
         // OTPS
         stmt.execute(
-            "CREATE TABLE otps (" +
-            "id INT PRIMARY KEY AUTO_INCREMENT, " +
-            "email VARCHAR(100) NOT NULL, " +
-            "code VARCHAR(4) NOT NULL, " +
-            "created TIMESTAMP DEFAULT CURRENT_TIMESTAMP, " +
-            "expires TIMESTAMP, " +
-            "used BOOLEAN DEFAULT FALSE)"
+                "CREATE TABLE otps ("
+                + "id INT PRIMARY KEY AUTO_INCREMENT, "
+                + "email VARCHAR(100) NOT NULL, "
+                + "code VARCHAR(4) NOT NULL, "
+                + "created TIMESTAMP DEFAULT CURRENT_TIMESTAMP, "
+                + "expires TIMESTAMP, "
+                + "used BOOLEAN DEFAULT FALSE)"
         );
         System.out.println("Created table: otps");
+        
+        // TIMETABLE_SLOTS
+        stmt.execute(
+                "CREATE TABLE timetable_slots ("
+                + "id INT PRIMARY KEY AUTO_INCREMENT, "
+                + "student_number VARCHAR(15) NOT NULL, "
+                + "day VARCHAR(10) NOT NULL, "
+                + "start_time TIME NOT NULL, "
+                + "end_time TIME NOT NULL, "
+                + "module_code VARCHAR(10) NOT NULL, "
+                + "room VARCHAR(20), "
+                + "color VARCHAR(7), "
+                + "FOREIGN KEY (student_number) REFERENCES students(student_number), "
+                + "FOREIGN KEY (module_code) REFERENCES modules(module_code), "
+                + "UNIQUE(student_number, day, start_time, end_time))"
+        );
+        System.out.println("Created table: timetable_slots");
     }
 
     private static void insertCourses(Statement stmt) throws SQLException {

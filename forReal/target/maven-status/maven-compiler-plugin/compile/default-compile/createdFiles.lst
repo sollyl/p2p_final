@@ -1,10 +1,13 @@
+za\ac\cput\forreal\databaseManager\TimetableManager.class
 za\ac\cput\forreal\SimpleEmailSender.class
 za\ac\cput\forreal\databaseManager\OTPManager.class
 za\ac\cput\forreal\SimpleEmailSender$1.class
 za\ac\cput\forreal\Step3Controller.class
 za\ac\cput\forreal\databaseManager\UserManager.class
 za\ac\cput\forreal\abstractBase\base$1.class
+za\ac\cput\forreal\TimetableController.class
 za\ac\cput\forreal\databaseManager\services\MarkValidationservice.class
+za\ac\cput\forreal\TimetableController$SlotData.class
 za\ac\cput\forreal\Signup2Controller.class
 za\ac\cput\forreal\LoginController.class
 za\ac\cput\forreal\databaseManager\DBConnection.class

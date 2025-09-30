@@ -3,18 +3,23 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.DashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.TimetableController">
    <children>
       <AnchorPane layoutX="33.0" layoutY="95.0" prefHeight="200.0" prefWidth="266.0" styleClass="back_ground" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -45,7 +50,7 @@
             </HBox>
             <AnchorPane layoutX="33.0" layoutY="199.0" prefHeight="200.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="16.0" prefHeight="48.0" prefWidth="230.0" spacing="9.0" styleClass="main_high">
+                  <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="16.0" prefHeight="48.0" prefWidth="230.0" spacing="9.0" styleClass="mypane">
                      <children>
                         <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
                            <children>
@@ -60,14 +65,15 @@
                      </children>
                      <padding>
                         <Insets left="12.0" />
-                     </padding></HBox>
+                     </padding>
+                  </HBox>
                   <VBox layoutX="18.0" layoutY="80.0" prefHeight="400.0" prefWidth="230.0" spacing="8.0">
                      <children>
                         <Accordion prefWidth="247.0" styleClass="accord">
-                          <panes>
-                            <TitledPane animated="false" text="Learning hub">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="200.0">
+                           <panes>
+                              <TitledPane animated="false" text="Learning hub">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="200.0">
                                        <children>
                                           <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
                                              <children>
@@ -156,14 +162,14 @@
                                           </HBox>
                                        </children>
                                     </AnchorPane>
-                              </content>
+                                 </content>
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
-                            </TitledPane>
-                            <TitledPane animated="false" text="Progress">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
+                              </TitledPane>
+                              <TitledPane animated="false" text="Progress">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
                                        <children>
                                           <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
                                              <children>
@@ -182,7 +188,7 @@
                                                 <Insets left="12.0" />
                                              </padding>
                                           </HBox>
-                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" onMouseClicked="#timetable" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="main_high">
                                              <children>
                                                 <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
                                                    <children>
@@ -216,15 +222,16 @@
                                                 <Insets left="12.0" />
                                              </padding>
                                           </HBox>
-                                       </children></AnchorPane>
-                              </content>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
-                            </TitledPane>
-                            <TitledPane animated="false" text="Account">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
+                              </TitledPane>
+                              <TitledPane animated="false" text="Account">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="200.0">
                                        <children>
                                           <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
                                              <children>
@@ -277,13 +284,14 @@
                                                 <Insets left="12.0" />
                                              </padding>
                                           </HBox>
-                                       </children></AnchorPane>
-                              </content>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
-                            </TitledPane>
-                          </panes>
+                              </TitledPane>
+                           </panes>
                         </Accordion>
                         <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
                            <children>
@@ -311,12 +319,12 @@
                      <children>
                         <VBox maxHeight="56.0" prefHeight="56.0" prefWidth="295.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label prefHeight="32.0" text="Dashboard" textFill="#ff6a28">
+                              <Label prefHeight="32.0" text="Timetable" textFill="#ff6a28">
                                  <font>
                                     <Font name="SansSerif Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="24.0" text="Welcome back to your learning journey" textFill="WHITE">
+                              <Label prefHeight="24.0" text="Create, edit, and save your weekly module schedule." textFill="WHITE">
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
@@ -374,64 +382,290 @@
             </HBox>
             <AnchorPane layoutX="18.0" layoutY="86.0" prefHeight="64.0" prefWidth="386.0" style="-fx-background-color: FAFAFA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
                <children>
-                  <VBox layoutX="18.0" layoutY="18.0" prefHeight="64.0" prefWidth="550.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="18.0" prefHeight="60.0" prefWidth="855.0">
                      <children>
-                        <HBox maxHeight="38.0" prefHeight="100.0" prefWidth="200.0">
+                        <VBox prefHeight="200.0" prefWidth="390.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label fx:id="display_fullName" maxHeight="38.0" styleClass="head_text_on_white" stylesheets="@main.css" text="Hello there, Name!">
+                              <Label maxHeight="35.0" prefHeight="35.0" styleClass="head_text_on_white" stylesheets="@main.css" text="Weekly Timetable">
                                  <font>
-                                    <Font name="SansSerif Bold" size="30.0" />
+                                    <Font name="SansSerif Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <HBox prefWidth="38.0">
-                                 <children>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../../../Hand-2-1--unscreen.gif" />
-                                       </image>
-                                    </ImageView>
-                                 </children></HBox>
-                              
+                              <Label prefHeight="25.0" text="Semester 2, 2025 - ICT: Applications Development" textFill="#4b5563">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" maxHeight="42.0" prefHeight="100.0" prefWidth="107.0" spacing="6.0" styleClass="but" stylesheets="@main.css">
+                           <children>
+                              <SVGPath content="M9.95312 3C9.95312 2.44687 9.50625 2 8.95312 2C8.4 2 7.95312 2.44687 7.95312 3V10.5844L5.65938 8.29063C5.26875 7.9 4.63438 7.9 4.24375 8.29063C3.85313 8.68125 3.85313 9.31563 4.24375 9.70625L8.24375 13.7063C8.63438 14.0969 9.26875 14.0969 9.65938 13.7063L13.6594 9.70625C14.05 9.31563 14.05 8.68125 13.6594 8.29063C13.2688 7.9 12.6344 7.9 12.2437 8.29063L9.95312 10.5844V3ZM2.95312 13C1.85 13 0.953125 13.8969 0.953125 15V16C0.953125 17.1031 1.85 18 2.95312 18H14.9531C16.0562 18 16.9531 17.1031 16.9531 16V15C16.9531 13.8969 16.0562 13 14.9531 13H11.7812L10.3656 14.4156C9.58438 15.1969 8.31875 15.1969 7.5375 14.4156L6.125 13H2.95312ZM14.4531 14.75C14.652 14.75 14.8428 14.829 14.9835 14.9697C15.1241 15.1103 15.2031 15.3011 15.2031 15.5C15.2031 15.6989 15.1241 15.8897 14.9835 16.0303C14.8428 16.171 14.652 16.25 14.4531 16.25C14.2542 16.25 14.0634 16.171 13.9228 16.0303C13.7821 15.8897 13.7031 15.6989 13.7031 15.5C13.7031 15.3011 13.7821 15.1103 13.9228 14.9697C14.0634 14.829 14.2542 14.75 14.4531 14.75Z" fill="WHITE" />
+                              <Label text="Export" textFill="WHITE">
+                                  <font>
+                                      <Font name="SansSerif Regular" size="16.0" />
+                                  </font>
+                              </Label>
                            </children>
                         </HBox>
-                        <Label prefHeight="24.0" text="Ready to learn something new today?" textFill="#4b5563">
-                           <font>
-                              <Font name="SansSerif Regular" size="16.0" />
-                           </font>
-                        </Label>
                      </children>
-                  </VBox>
-                  <ScrollPane layoutX="18.0" layoutY="107.0" prefHeight="665.0" prefWidth="855.0" styleClass="scrolly" stylesheets="@main.css">
-                     <content>
-                        <VBox prefHeight="664.0" prefWidth="855.0">
+                  </HBox>
+                  <GridPane fx:id="timetableGrid" layoutX="18.0" layoutY="90.0" styleClass="main_boxes2" stylesheets="@main.css">
+                      <columnConstraints>
+                          <ColumnConstraints hgrow="SOMETIMES" minWidth="120.0" prefWidth="120.0" />
+                          <ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" prefWidth="146.0" />
+                          <ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" prefWidth="146.0" />
+                          <ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" prefWidth="146.0" />
+                          <ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" prefWidth="146.0" />
+                          <ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" prefWidth="146.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                          <RowConstraints minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                          <RowConstraints minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                          <RowConstraints minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                          <RowConstraints minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                          <RowConstraints minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                          <RowConstraints minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                          <RowConstraints minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                          <RowConstraints minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+    
+                      <!-- Headers -->
+                      <Label alignment="CENTER" prefHeight="60.0" prefWidth="120.0" style="-fx-border-radius: 12 0 0 0; -fx-background-radius: 12 0 0 0; -fx-background-color: #1E2A38;" text="TIME" textFill="#ffc857" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font>
+                        <GridPane.margin>
+                           <Insets bottom="5.0" />
+                        </GridPane.margin></Label>
+                      <Label alignment="CENTER" prefHeight="60.0" prefWidth="154.0" styleClass="primary1" text="MONDAY" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                        <GridPane.margin>
+                           <Insets bottom="5.0" />
+                        </GridPane.margin></Label>
+                      <Label alignment="CENTER" prefHeight="60.0" prefWidth="168.0" styleClass="primary1" text="TUESDAY" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" />
+                        </GridPane.margin>
+                        <font>
+                           <Font name="SansSerif Bold" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="60.0" prefWidth="167.0" text="WEDNESDAY" textFill="WHITE" GridPane.columnIndex="3">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" />
+                        </GridPane.margin>
+                        <styleClass>
+                           <String fx:value="grid-header-day" />
+                           <String fx:value="primary1" />
+                        </styleClass>
+                        <font>
+                           <Font name="SansSerif Bold" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="60.0" prefWidth="151.0" text="THURSDAY" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" />
+                        </GridPane.margin>
+                        <styleClass>
+                           <String fx:value="grid-header-day" />
+                           <String fx:value="primary1" />
+                        </styleClass>
+                        <font>
+                           <Font name="SansSerif Bold" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="60.0" prefWidth="157.0" style="-fx-background-radius: 0 12 0 0; -fx-border-radius: 0 12 0 0;" text="FRIDAY" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="0">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" />
+                        </GridPane.margin>
+                        <styleClass>
+                           <String fx:value="grid-header-day" />
+                           <String fx:value="primary1" />
+                        </styleClass>
+                        <font>
+                           <Font name="SansSerif Bold" size="14.0" />
+                        </font></Label>
+
+                      <!-- Time Labels -->
+                      <Label alignment="CENTER" prefHeight="85.0" prefWidth="120.0" style="-fx-background-color: #4A5A6B;" styleClass="time-label" text="08:30 - 09:55" textFill="#ffc857" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="85.0" prefWidth="120.0" style="-fx-background-color: #4A5A6B;" styleClass="time-label" text="10:00 - 11:25" textFill="#ffc857" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="85.0" prefWidth="120.0" style="-fx-background-color: #4A5A6B;" styleClass="time-label" text="11:30 - 12:55" textFill="#ffc857" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="85.0" prefWidth="120.0" style="-fx-background-color: #D1D5DB;" styleClass="head_text_on_white" text="13:00 - 13:45" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="85.0" prefWidth="120.0" style="-fx-background-color: #4A5A6B;" styleClass="time-label" text="13:45 - 15:10" textFill="#ffc857" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="85.0" prefWidth="120.0" style="-fx-background-color: #4A5A6B;" styleClass="time-label" text="15:15 - 16:40" textFill="#ffc857" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font></Label>
+                      <Label alignment="CENTER" prefHeight="85.0" prefWidth="120.0" style="-fx-background-color: #4A5A6B;" styleClass="time-label" text="16:45 - 18:55" textFill="#ffc857" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                        <font>
+                           <Font name="SansSerif Regular" size="14.0" />
+                        </font></Label>
+
+                      <!-- Timetable Slots - Monday -->
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                      <VBox styleClass="lunch-slot" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                      <!-- Tuesday -->
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                      <VBox styleClass="lunch-slot" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+
+                      <!-- Wednesday -->
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                      <VBox styleClass="lunch-slot" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+
+                      <!-- Thursday -->
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                      <VBox styleClass="lunch-slot" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+
+                      <!-- Friday -->
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                      <VBox styleClass="lunch-slot" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                      <VBox styleClass="timetable-slot" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                  </GridPane>
+                  <VBox layoutX="912.0" layoutY="143.0" prefHeight="200.0" prefWidth="375.0" style="-fx-background-color: white; -fx-border-color: #E5E7EB; -fx-border-width: 0 0 0 1;" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane minHeight="96.0" prefHeight="96.0" prefWidth="200.0" style="-fx-border-color: #E5E7EB; -fx-border-width: 0 0 1px 0;">
                            <children>
-                              <AnchorPane prefHeight="168.0" prefWidth="200.0" styleClass="main_boxes">
+                              <Label layoutX="24.0" layoutY="24.0" text="Edit Time Slot">
+                                 <font>
+                                    <Font name="SansSerif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="24.0" layoutY="56.0" text="Select a slot to edit or create new module" textFill="#4b5563">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <VBox alignment="TOP_CENTER" prefHeight="682.0" prefWidth="374.0">
+                           <children>
+                              <VBox maxWidth="322.0" prefHeight="444.0" prefWidth="322.0" spacing="24.0">
                                  <children>
-                                    <HBox alignment="CENTER_LEFT" layoutX="13.0" layoutY="24.0" prefHeight="28.0" prefWidth="830.0" spacing="12.0">
+                                    <VBox prefHeight="70.0" prefWidth="100.0" spacing="8.0">
                                        <children>
-                                          <SVGPath content="M15.3 16.7L16.7 15.3L13 11.6V7H11V12.4L15.3 16.7ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22Z" fill="#ff6a28" />
-                                          <Label maxHeight="28.0" styleClass="head_text_on_white" text="Today's Modules">
+                                          <Label prefHeight="20.0" styleClass="head_text_on_white" text="Module Code">
                                              <font>
-                                                <Font name="SansSerif Bold" size="19.0" />
+                                                <Font name="SansSerif Bold" size="14.0" />
                                              </font>
                                           </Label>
+                                          <ComboBox fx:id="moduleCodeCombo" prefHeight="40.0" prefWidth="322.0" promptText="Select your module code">
+                                             <styleClass>
+                                                <String fx:value="step_combo" />
+                                                <String fx:value="box_text" />
+                                                <String fx:value="log_field" />
+                                             </styleClass>
+                                          </ComboBox>
                                        </children>
-                                    </HBox>
-                                    <HBox fx:id="holds_modules" alignment="CENTER" layoutX="13.0" layoutY="59.0" prefHeight="76.0" prefWidth="830.0" spacing="10.0">
+                                    </VBox>
+                                    <VBox prefHeight="70.0" prefWidth="100.0" spacing="8.0">
                                        <children>
-                                          <Label text="No upcoming modules today. " textFill="#4b5563">
+                                          <Label prefHeight="20.0" styleClass="head_text_on_white" text="Module name">
                                              <font>
-                                                <Font name="SansSerif Regular" size="16.0" />
+                                                <Font name="SansSerif Bold" size="14.0" />
                                              </font>
                                           </Label>
+                                          <ComboBox fx:id="moduleNameCombo" prefHeight="40.0" prefWidth="322.0" promptText="Auto detected">
+                                             <styleClass>
+                                                <String fx:value="step_combo" />
+                                                <String fx:value="box_text" />
+                                                <String fx:value="log_field" />
+                                             </styleClass>
+                                          </ComboBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="70.0" prefWidth="100.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="20.0" styleClass="head_text_on_white" text="Room">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="roomField" prefHeight="40.0" promptText="Enter your venue">
+                                             <styleClass>
+                                                <String fx:value="log_field" />
+                                                <String fx:value="box_text" />
+                                             </styleClass>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="60.0" prefWidth="100.0" spacing="8.0">
+                                       <children>
+                                          <Label text="Color theme">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ColorPicker fx:id="colorPicker" styleClass="back_ground" />
+                                       </children>
+                                    </VBox>
+                                    <HBox prefHeight="40.0" prefWidth="200.0" spacing="12.0">
+                                       <children>
+                                          <HBox alignment="CENTER" onMouseClicked="#saveTimetableSlot" prefHeight="100.0" prefWidth="200.0" spacing="8.0" styleClass="but">
+                                             <children>
+                                                <SVGPath content="M2.98438 3C1.88125 3 0.984375 3.89688 0.984375 5V15C0.984375 16.1031 1.88125 17 2.98438 17H12.9844C14.0875 17 14.9844 16.1031 14.9844 15V7.41563C14.9844 6.88438 14.775 6.375 14.4 6L11.9844 3.58438C11.6094 3.20938 11.1 3 10.5688 3H2.98438ZM2.98438 6C2.98438 5.44687 3.43125 5 3.98438 5H9.98438C10.5375 5 10.9844 5.44687 10.9844 6V8C10.9844 8.55313 10.5375 9 9.98438 9H3.98438C3.43125 9 2.98438 8.55313 2.98438 8V6ZM7.98438 11C8.51481 11 9.02352 11.2107 9.39859 11.5858C9.77366 11.9609 9.98438 12.4696 9.98438 13C9.98438 13.5304 9.77366 14.0391 9.39859 14.4142C9.02352 14.7893 8.51481 15 7.98438 15C7.45394 15 6.94523 14.7893 6.57016 14.4142C6.19509 14.0391 5.98438 13.5304 5.98438 13C5.98438 12.4696 6.19509 11.9609 6.57016 11.5858C6.94523 11.2107 7.45394 11 7.98438 11Z" fill="WHITE" />
+                                                <Label text="Save" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" onMouseClicked="#deleteTimetableSlot" prefHeight="100.0" prefWidth="46.0" styleClass="but-red">
+                                             <children>
+                                                <SVGPath content="M4.225 2.55313L4 3H1C0.446875 3 0 3.44687 0 4C0 4.55313 0.446875 5 1 5H13C13.5531 5 14 4.55313 14 4C14 3.44687 13.5531 3 13 3H10L9.775 2.55313C9.60625 2.2125 9.25938 2 8.88125 2H5.11875C4.74063 2 4.39375 2.2125 4.225 2.55313ZM13 6H1L1.6625 16.5938C1.7125 17.3844 2.36875 18 3.15937 18H10.8406C11.6312 18 12.2875 17.3844 12.3375 16.5938L13 6Z" fill="WHITE" />
+                                             </children>
+                                          </HBox>
                                        </children>
                                     </HBox>
                                  </children>
-                              </AnchorPane>
+                              </VBox>
                            </children>
+                           <padding>
+                              <Insets top="24.0" />
+                           </padding>
                         </VBox>
-                     </content>
-                  </ScrollPane>
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
          </children>
