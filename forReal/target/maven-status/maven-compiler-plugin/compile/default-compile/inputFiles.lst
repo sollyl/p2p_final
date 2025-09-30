@@ -7,6 +7,7 @@ C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\database
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\databaseManager\OTPManager.java
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\databaseManager\services\MarkValidationservice.java
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\databaseManager\services\UserQualificationService.java
+C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\databaseManager\TimetableManager.java
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\databaseManager\UserManager.java
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\LandingController.java
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\LoginController.java
@@ -16,3 +17,4 @@ C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\SimpleEm
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\Step1Controller.java
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\Step2Controller.java
 C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\Step3Controller.java
+C:\Users\lyeso\Music\p2p_final\forReal\src\main\java\za\ac\cput\forreal\TimetableController.java

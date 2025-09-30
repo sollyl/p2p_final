@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.Step3Controller">
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.Step3Controller">
    <children>
       <ImageView fitHeight="890.0" fitWidth="1591.0" layoutX="-16.0" layoutY="-15.0" pickOnBounds="true">
          <image>
@@ -105,7 +105,7 @@
                                           </HBox>
                                           <AnchorPane layoutX="45.0" layoutY="427.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                              <children>
-                                                <Button layoutX="141.0" layoutY="8.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="159.0" styleClass="but" text="All set " textFill="WHITE">
+                                                <Button layoutX="141.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#goToHome" prefHeight="50.0" prefWidth="159.0" styleClass="but" text="All set " textFill="WHITE">
                                                    <font>
                                                       <Font name="SansSerif Bold" size="18.0" />
                                                    </font>

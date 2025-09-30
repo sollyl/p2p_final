@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
@@ -73,7 +75,7 @@ public class LoginController extends base implements Initializable {
                     showAlertGreen(main_vibe, "Success", "Login successful!");
 
                     // TODO: navigate to homepage
-                    // loadScene("homepage.fxml");
+                    loadScene("dashboard.fxml");
 
                 } else {
                     showAlert(main_vibe, "Error", "Username or password is incorrect.");
@@ -85,6 +87,8 @@ public class LoginController extends base implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
             showAlert(main_vibe, "Error", "An error occurred while logging in.");
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

@@ -1,6 +1,9 @@
 package za.ac.cput.forreal.abstractBase;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,6 +14,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import za.ac.cput.forreal.App;
+import za.ac.cput.forreal.databaseManager.DBConnection;
 
 public abstract class base {
 
@@ -34,13 +38,52 @@ public abstract class base {
         return currentUsername;
     }
     
-    public static void setCurrentUserRole(String role) {
-        currentUserRole = role;
-    }
-
     public static String getCurrentUserRole() {
-        return currentUserRole;
+    // Always fetch from database to ensure we have the latest value
+    if (currentStudentNumber == null || currentStudentNumber.trim().isEmpty()) {
+        return "USER"; // default fallback
     }
+    
+    // Try users table first (logged_in_as)
+    String sql = "SELECT logged_in_as FROM users WHERE student_number = ?";
+    
+    try (Connection con = DBConnection.connect();
+         PreparedStatement pstmt = con.prepareStatement(sql)) {
+        
+        pstmt.setString(1, currentStudentNumber);
+        ResultSet rs = pstmt.executeQuery();
+        
+        if (rs.next()) {
+            String role = rs.getString("logged_in_as");
+            if (role != null && !role.trim().isEmpty()) {
+                return role;
+            }
+        }
+        
+    } catch (Exception e) {
+        System.err.println("Error fetching user role from users table: " + e.getMessage());
+    }
+    
+    // If not found in users table, try students table (account_type)
+    sql = "SELECT account_type FROM students WHERE student_number = ?";
+    
+    try (Connection con = DBConnection.connect();
+         PreparedStatement pstmt = con.prepareStatement(sql)) {
+        
+        pstmt.setString(1, currentStudentNumber);
+        ResultSet rs = pstmt.executeQuery();
+        
+        if (rs.next()) {
+            String role = rs.getString("account_type");
+            return (role != null && !role.trim().isEmpty()) ? role : "USER";
+        }
+        
+    } catch (Exception e) {
+        System.err.println("Error fetching user role from students table: " + e.getMessage());
+    }
+    
+    return "USER"; // default fallback
+}
 
     public static boolean isUserLoggedIn() {
         return currentUsername != null && !currentUsername.trim().isEmpty();

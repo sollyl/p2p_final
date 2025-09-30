@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Label?>
@@ -15,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="za.ac.cput.forreal.DashboardController">
    <children>
-      <AnchorPane layoutX="33.0" layoutY="95.0" prefHeight="200.0" prefWidth="265.0" styleClass="back_ground" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="33.0" layoutY="95.0" prefHeight="200.0" prefWidth="266.0" styleClass="back_ground" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="86.0" prefWidth="265.0" styleClass="left_logo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
@@ -181,7 +182,7 @@
                                                 <Insets left="12.0" />
                                              </padding>
                                           </HBox>
-                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
+                                          <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="48.0" onMouseClicked="#timetable" prefHeight="40.0" prefWidth="206.0" spacing="9.0" styleClass="mypane">
                                              <children>
                                                 <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
                                                    <children>
@@ -304,18 +305,18 @@
       </AnchorPane>
       <AnchorPane layoutX="297.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER" layoutX="16.0" prefHeight="86.0" prefWidth="1249.0" styleClass="main_top" stylesheets="@main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <HBox alignment="CENTER" layoutX="16.0" prefHeight="86.0" prefWidth="1249.0" stylesheets="@main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1212.0">
                      <children>
                         <VBox maxHeight="56.0" prefHeight="56.0" prefWidth="295.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label prefHeight="32.0" styleClass="head_text_on_white" text="Dashboard">
+                              <Label prefHeight="32.0" text="Dashboard" textFill="#ff6a28">
                                  <font>
                                     <Font name="SansSerif Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="24.0" text="Welcome back to your learning journey" textFill="#4b5563">
+                              <Label prefHeight="24.0" text="Welcome back to your learning journey" textFill="WHITE">
                                  <font>
                                     <Font name="SansSerif Regular" size="16.0" />
                                  </font>
@@ -335,12 +336,12 @@
                               </HBox>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Label fx:id="username" prefHeight="24.0" styleClass="head_text_on_white" text="Username">
+                                    <Label fx:id="username" prefHeight="24.0" text="Username" textFill="#ff6a28">
                                        <font>
                                           <Font name="SansSerif Regular" size="16.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="account_type" prefHeight="20.0" text="Student" textFill="#4b5563">
+                                    <Label fx:id="account_type" prefHeight="20.0" text="Student" textFill="WHITE">
                                        <font>
                                           <Font name="SansSerif Regular" size="14.0" />
                                        </font>
@@ -353,12 +354,12 @@
                            <children>
                               <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
                                  <children>
-                                    <SVGPath content="M4 19V17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08333 5.2375 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.6458 2.72917 10.9375 2.4375C11.2292 2.14583 11.5833 2 12 2C12.4167 2 12.7708 2.14583 13.0625 2.4375C13.3542 2.72917 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.2375 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9792 21.8042 10.5875 21.4125C10.1958 21.0208 10 20.55 10 20H14C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22Z" fill="#4b5563" />
+                                    <SVGPath content="M4 19V17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08333 5.2375 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.6458 2.72917 10.9375 2.4375C11.2292 2.14583 11.5833 2 12 2C12.4167 2 12.7708 2.14583 13.0625 2.4375C13.3542 2.72917 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.2375 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9792 21.8042 10.5875 21.4125C10.1958 21.0208 10 20.55 10 20H14C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22Z" fill="WHITE" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" maxHeight="24.0" prefHeight="100.0" prefWidth="24.0">
                                  <children>
-                                    <SVGPath content="M9.2502 22L8.8502 18.8C8.63353 18.7167 8.42936 18.6167 8.2377 18.5C8.04603 18.3833 7.85853 18.2583 7.6752 18.125L4.7002 19.375L1.9502 14.625L4.5252 12.675C4.50853 12.5583 4.5002 12.4458 4.5002 12.3375V11.6625C4.5002 11.5542 4.50853 11.4417 4.5252 11.325L1.9502 9.375L4.7002 4.625L7.6752 5.875C7.85853 5.74167 8.0502 5.61667 8.2502 5.5C8.4502 5.38333 8.6502 5.28333 8.8502 5.2L9.2502 2H14.7502L15.1502 5.2C15.3669 5.28333 15.571 5.38333 15.7627 5.5C15.9544 5.61667 16.1419 5.74167 16.3252 5.875L19.3002 4.625L22.0502 9.375L19.4752 11.325C19.4919 11.4417 19.5002 11.5542 19.5002 11.6625V12.3375C19.5002 12.4458 19.4835 12.5583 19.4502 12.675L22.0252 14.625L19.2752 19.375L16.3252 18.125C16.1419 18.2583 15.9502 18.3833 15.7502 18.5C15.5502 18.6167 15.3502 18.7167 15.1502 18.8L14.7502 22H9.2502ZM12.0502 15.5C13.0169 15.5 13.8419 15.1583 14.5252 14.475C15.2085 13.7917 15.5502 12.9667 15.5502 12C15.5502 11.0333 15.2085 10.2083 14.5252 9.525C13.8419 8.84167 13.0169 8.5 12.0502 8.5C11.0669 8.5 10.2377 8.84167 9.5627 9.525C8.8877 10.2083 8.5502 11.0333 8.5502 12C8.5502 12.9667 8.8877 13.7917 9.5627 14.475C10.2377 15.1583 11.0669 15.5 12.0502 15.5Z" fill="#4b5563" />
+                                    <SVGPath content="M9.2502 22L8.8502 18.8C8.63353 18.7167 8.42936 18.6167 8.2377 18.5C8.04603 18.3833 7.85853 18.2583 7.6752 18.125L4.7002 19.375L1.9502 14.625L4.5252 12.675C4.50853 12.5583 4.5002 12.4458 4.5002 12.3375V11.6625C4.5002 11.5542 4.50853 11.4417 4.5252 11.325L1.9502 9.375L4.7002 4.625L7.6752 5.875C7.85853 5.74167 8.0502 5.61667 8.2502 5.5C8.4502 5.38333 8.6502 5.28333 8.8502 5.2L9.2502 2H14.7502L15.1502 5.2C15.3669 5.28333 15.571 5.38333 15.7627 5.5C15.9544 5.61667 16.1419 5.74167 16.3252 5.875L19.3002 4.625L22.0502 9.375L19.4752 11.325C19.4919 11.4417 19.5002 11.5542 19.5002 11.6625V12.3375C19.5002 12.4458 19.4835 12.5583 19.4502 12.675L22.0252 14.625L19.2752 19.375L16.3252 18.125C16.1419 18.2583 15.9502 18.3833 15.7502 18.5C15.5502 18.6167 15.3502 18.7167 15.1502 18.8L14.7502 22H9.2502ZM12.0502 15.5C13.0169 15.5 13.8419 15.1583 14.5252 14.475C15.2085 13.7917 15.5502 12.9667 15.5502 12C15.5502 11.0333 15.2085 10.2083 14.5252 9.525C13.8419 8.84167 13.0169 8.5 12.0502 8.5C11.0669 8.5 10.2377 8.84167 9.5627 9.525C8.8877 10.2083 8.5502 11.0333 8.5502 12C8.5502 12.9667 8.8877 13.7917 9.5627 14.475C10.2377 15.1583 11.0669 15.5 12.0502 15.5Z" fill="WHITE" />
                                  </children>
                               </HBox>
                            </children>
@@ -366,8 +367,12 @@
                      </children>
                   </HBox>
                </children>
+               <styleClass>
+                  <String fx:value="main_top" />
+                  <String fx:value="back_ground" />
+               </styleClass>
             </HBox>
-            <AnchorPane layoutX="18.0" layoutY="86.0" prefHeight="64.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+            <AnchorPane layoutX="18.0" layoutY="86.0" prefHeight="64.0" prefWidth="386.0" style="-fx-background-color: FAFAFA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
                <children>
                   <VBox layoutX="18.0" layoutY="18.0" prefHeight="64.0" prefWidth="550.0">
                      <children>
@@ -382,7 +387,7 @@
                                  <children>
                                     <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../../../../../../../Downloads/Hand-2-1--unscreen.gif" />
+                                          <Image url="@../../../../Hand-2-1--unscreen.gif" />
                                        </image>
                                     </ImageView>
                                  </children></HBox>

@@ -36,10 +36,9 @@ public class Signup2Controller extends base implements Initializable {
         try (var con = DBConnection.connect();
              var pstmt = con.prepareStatement(sql)) {
 
-            String hashedPassword = Integer.toString(password.hashCode()); // replace with proper hash
 
             pstmt.setString(1, username);
-            pstmt.setString(2, hashedPassword);
+            pstmt.setString(2, password);
             pstmt.setString(3, studentNumber);
 
             return pstmt.executeUpdate() > 0;

@@ -54,9 +54,9 @@ public class UserQualificationService {
     
     public static String getUserType(String studentNumber) {
         if (qualifiesAsTutor(studentNumber)) {
-            return "TUTOR_AND_USER";
+            return "TUTOR_AND_STUDENT";
         } else {
-            return "USER_ONLY";
+            return "STUDENT_ONLY";
         }
     }
     
@@ -66,7 +66,7 @@ public class UserQualificationService {
         try (Connection con = DBConnection.connect();
              PreparedStatement pstmt = con.prepareStatement(sql)) {
             
-            boolean isTutor = "TUTOR".equals(userType) || "TUTOR_AND_USER".equals(userType);
+            boolean isTutor = "TUTOR".equals(userType) || "TUTOR_AND_STUDENT".equals(userType);
             pstmt.setBoolean(1, isTutor);
             pstmt.setString(2, studentNumber);
             
@@ -91,28 +91,46 @@ public class UserQualificationService {
     }
     
     public static List<String> getEligibleTutorSubjects(String studentNumber) {
-    List<String> subjects = new ArrayList<>();
-    String sql = "SELECT m.module_name " +
-                 "FROM marks mk " +
-                 "JOIN modules m ON mk.module_code = m.module_code " +
-                 "WHERE mk.student_number = ? " +
-                 "AND mk.mark >= 70"; // only marks >= 70
+        List<String> subjects = new ArrayList<>();
+        String sql = "SELECT m.module_name " +
+                     "FROM marks mk " +
+                     "JOIN modules m ON mk.module_code = m.module_code " +
+                     "WHERE mk.student_number = ? " +
+                     "AND mk.mark >= 70";
 
-    try (Connection con = DBConnection.connect();
-         PreparedStatement pstmt = con.prepareStatement(sql)) {
+        try (Connection con = DBConnection.connect();
+             PreparedStatement pstmt = con.prepareStatement(sql)) {
 
-        pstmt.setString(1, studentNumber);
-        ResultSet rs = pstmt.executeQuery();
+            pstmt.setString(1, studentNumber);
+            ResultSet rs = pstmt.executeQuery();
 
-        while (rs.next()) {
-            subjects.add(rs.getString("module_name") + "\n");
+            while (rs.next()) {
+                subjects.add(rs.getString("module_name"));
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error fetching eligible tutor subjects: " + e.getMessage());
         }
 
-    } catch (SQLException e) {
-        System.err.println("Error fetching eligible tutor subjects: " + e.getMessage());
+        return subjects;
     }
-
-    return subjects;
-}
-
+    
+    // NEW METHOD: Get user role from database
+    public static String getUserRoleFromDatabase(String studentNumber) {
+        String sql = "SELECT account_type FROM students WHERE student_number = ?";
+        
+        try (Connection con = DBConnection.connect(); 
+             PreparedStatement pstmt = con.prepareStatement(sql)) {
+            
+            pstmt.setString(1, studentNumber);
+            ResultSet rs = pstmt.executeQuery();
+            
+            if (rs.next()) {
+                return rs.getString("account_type");
+            }
+        } catch (SQLException e) {
+            System.err.println("Error fetching user role from DB: " + e.getMessage());
+        }
+        return null;
+    }
 }
